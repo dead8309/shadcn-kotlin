@@ -4,11 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import com.varabyte.kobweb.core.Page
 import org.example.kobwebreaxttailwind.components.layouts.PageLayout
-import org.example.kobwebreaxttailwind.components.react.Button
-import org.example.kobwebreaxttailwind.components.react.ButtonSize
-import org.example.kobwebreaxttailwind.components.react.ButtonVariant
-import org.example.kobwebreaxttailwind.components.react.ui.Checkbox
-import org.example.kobwebreaxttailwind.components.react.ui.Label
+import org.example.kobwebreaxttailwind.components.react.ui.*
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 import react.FC
@@ -24,13 +20,8 @@ import web.dom.document
 @Composable
 fun ReactPage() {
     kotlinext.js.require("./globals.css")
-    PageLayout("React") {
+    PageLayout("React + Tailwind + Kobweb") {
         Text("React Components will appear here")
-        Button(
-            text = "Shadcn Button in Kobweb",
-            variant = ButtonVariant.DEFAULT,
-            size = ButtonSize.DEFAULT
-        )
         Div(attrs = {
             classes("flex","flex-col","gap-y-4")
             id("shadcn")
@@ -43,8 +34,9 @@ fun ReactPage() {
 }
 
 val ShadCnApp = FC<Props> {
-    val (check,setChecked) = useState(true)
+    val (check, setChecked) = useState(true)
     div {
+        className = ClassName("flex flex-row items-center pt-4 gap-x-4")
         Checkbox {
             checked = check
             defaultChecked = false
@@ -53,25 +45,53 @@ val ShadCnApp = FC<Props> {
         }
         Label {
             htmlFor = "shad-check"
-            +"Accept Terms"
+            className =
+                ClassName("text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70")
+            +"Accept terms and conditions"
         }
     }
 
-    org.example.kobwebreaxttailwind.components.react.ui.Button {
+    Button {
         variant = "default"
         +"Default Button"
     }
-    org.example.kobwebreaxttailwind.components.react.ui.Button {
+    Button {
         variant = "destructive"
         +"Destructive Button"
     }
-    org.example.kobwebreaxttailwind.components.react.ui.Button {
+    Button {
         variant = "outline"
         +"Outline Button"
     }
-    org.example.kobwebreaxttailwind.components.react.ui.Button {
+    Button {
         variant = "secondary"
-        className = ClassName("h-11 px-8 rounded-md")
         +"Secondary Button"
+    }
+    AlertDialog {
+        AlertDialogTrigger {
+            Button {
+                variant ="outline"
+                +"Show Dialog"
+            }
+        }
+        AlertDialogContent {
+            AlertDialogHeader {
+                AlertDialogTitle {
+                    +"Are you absolutely sure?"
+                }
+                AlertDialogDescription {
+                    +"This action cannot be undone. This will permanently delete your "
+                    +"account and remove your data from our servers."
+                }
+            }
+            AlertDialogFooter {
+                AlertDialogCancel {
+                    +"Cancel"
+                }
+                AlertDialogAction {
+                    +"Continue"
+                }
+            }
+        }
     }
 }
