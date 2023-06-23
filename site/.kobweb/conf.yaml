@@ -1,0 +1,14 @@
+site:
+  title: "Kobweb Reaxt Tailwind"
+
+server:
+  files:
+    dev:
+      contentRoot: "build/processedResources/js/main/public"
+      script: "build/developmentExecutable/kobwebreaxttailwind.js"
+      api: "build/libs/kobwebreaxttailwind.jar"
+    prod:
+      script: "build/distributions/kobwebreaxttailwind.js"
+      siteRoot: ".kobweb/site"
+
+  port: 8080
