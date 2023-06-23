@@ -61,6 +61,7 @@ fun NavHeader() {
             verticalAlignment = Alignment.CenterVertically
         ) {
             NavLink("/", "HOME")
+            NavLink("/dashboard", "Dashboard")
             Spacer()
 
             Button(
