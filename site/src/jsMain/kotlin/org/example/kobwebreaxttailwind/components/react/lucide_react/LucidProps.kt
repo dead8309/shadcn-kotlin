@@ -38,3 +38,40 @@ external val Settings: FC<LucideProps>
 
 @JsName("User")
 external val User: FC<LucideProps>
+
+@JsName("BellRing")
+external val BellRing: FC<LucideProps>
+
+@JsName("Check")
+external val Check: FC<LucideProps>
+
+@JsName("Loader2")
+external val Loader2: FC<LucideProps>
+
+@JsName("Mail")
+external val Mail: FC<LucideProps>
+
+@JsName("Keyboard")
+external val Keyboard: FC<LucideProps>
+
+@JsName("UserPlus")
+external val UserPlus: FC<LucideProps>
+
+@JsName("MessageSquare")
+external val MessageSquare: FC<LucideProps>
+
+@JsName("Plus")
+external val Plus: FC<LucideProps>
+
+@JsName("Github")
+external val Github: FC<LucideProps>
+
+@JsName("LifeBuoy")
+external val LifeBuoy: FC<LucideProps>
+
+@JsName("Cloud")
+external val Cloud: FC<LucideProps>
+
+
+
+

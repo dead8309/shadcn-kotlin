@@ -12,6 +12,7 @@ external interface ButtonProps: StandardProps<HTMLButtonElement> {
     var variant: String
     @JsName("size")
     var size: String
+    var disabled: Boolean
 }
 
 @JsName("Button")
