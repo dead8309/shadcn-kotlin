@@ -221,5 +221,14 @@ TODO
 
 ## Acknowledgments
 
-Special thanks to the Kotlin JS, React, Tailwind CSS, and Kobweb library communities for their excellent tools and
-resources that make this project possible.
+Special thanks to excellent people, tools and
+resources that make this project possible:
+
+* [Jetbrains](https://github.com/JetBrains) for [Kotlin JS Wrappers](https://github.com/JetBrains/kotlin-wrappers), 
+* [facebook](https://github.com/facebook) for [ReactJS](https://github.com/facebook/react)
+* [Tailwind Labs](https://github.com/tailwindlabs) for [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss)
+* [@verabyte](https://github.com/varabyte/kobweb) for [kobweb](https://github.com/varabyte/kobweb)
+* [@nanodeath](https://github.com/nanodeath) for earlier implementation of [tailwind css with KotlinJS](https://github.com/nanodeath/kotlinjs-tailwindcss)
+* [@clovis-ai](https://gitlab.com/clovis-ai) for [Updated Gradle Configurations](https://gitlab.com/opensavvy/decouple/-/blob/16bb282309daba3a9b364a53518bc4a6e5f74128/demos/demo-web/build.gradle.kts)
+* [@shadcn](https://github.com/shadcn) for [ui](https://github.com/shadcn/ui) components
+* [@lukeshay](https://github.com/lukeshay) for [published version](https://github.com/lukeshay/ui) of shadcn library
