@@ -10,12 +10,23 @@ platform for testing and experimenting with React Libraries and Tailwind CSS
 
 ## Table of Contents
 
+- [Images](#images)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
 - [Integration with Tailwind CSS](#integration-with-tailwind-css)
 - [Integration with React Libraries](#integration-with-react-libraries)
 - [Acknowledgement](#acknowledgments)
+
+## Images
+* located at `/components` page
+![components](metadata/components.png)
+
+* located at `/dashboard` page
+![dashboard](metadata/dashboard.png)
+
+
+
 
 ## Installation
 
