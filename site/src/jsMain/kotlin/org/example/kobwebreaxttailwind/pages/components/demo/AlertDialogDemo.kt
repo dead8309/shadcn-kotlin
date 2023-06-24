@@ -6,6 +6,7 @@ import react.FC
 val AlertDialogDemo = FC<AlertDialogProps> {
     AlertDialog {
         AlertDialogTrigger {
+            asChild = true
             Button {
                 variant ="outline"
                 +"Show Dialog"

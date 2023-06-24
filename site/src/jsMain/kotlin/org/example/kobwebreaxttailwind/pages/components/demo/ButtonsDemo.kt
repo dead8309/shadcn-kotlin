@@ -34,16 +34,16 @@ val ButtonsDemo = FC<Props> {
             variant = "ghost"
             +"Ghost"
         }
+        Button {
+            size = "lg"
+            +"Large"
+        }
+        Button {
+            size = "sm"
+            +"Small"
+        }
     }
     ButtonWithIcons {   }
-    Button {
-        size = "lg"
-        +"Large"
-    }
-    Button {
-        size = "sm"
-        +"Small"
-    }
 }
 
 private val ButtonWithIcons = FC<Props> {
