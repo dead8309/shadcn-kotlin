@@ -62,6 +62,7 @@ fun NavHeader() {
         ) {
             NavLink("/", "HOME")
             NavLink("/dashboard", "Dashboard")
+            NavLink("/components", "Components")
             Spacer()
 
             Button(
