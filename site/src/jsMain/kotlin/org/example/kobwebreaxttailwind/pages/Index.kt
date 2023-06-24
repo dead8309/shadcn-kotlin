@@ -4,7 +4,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import com.varabyte.kobweb.core.Page
 import org.example.kobwebreaxttailwind.components.layouts.PageLayout
-import org.example.kobwebreaxttailwind.components.react.ui.*
+import org.example.kobwebreaxttailwind.components.react.ui.Button
+import org.example.kobwebreaxttailwind.components.react.ui.Checkbox
+import org.example.kobwebreaxttailwind.components.react.ui.Label
+import org.example.kobwebreaxttailwind.pages.components.demo.AlertDialogDemo
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 import react.FC
@@ -67,31 +70,5 @@ val ShadCnApp = FC<Props> {
         variant = "secondary"
         +"Secondary Button"
     }
-    AlertDialog {
-        AlertDialogTrigger {
-            Button {
-                variant ="outline"
-                +"Show Dialog"
-            }
-        }
-        AlertDialogContent {
-            AlertDialogHeader {
-                AlertDialogTitle {
-                    +"Are you absolutely sure?"
-                }
-                AlertDialogDescription {
-                    +"This action cannot be undone. This will permanently delete your "
-                    +"account and remove your data from our servers."
-                }
-            }
-            AlertDialogFooter {
-                AlertDialogCancel {
-                    +"Cancel"
-                }
-                AlertDialogAction {
-                    +"Continue"
-                }
-            }
-        }
-    }
+    AlertDialogDemo {}
 }
