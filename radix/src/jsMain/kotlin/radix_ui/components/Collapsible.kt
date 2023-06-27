@@ -42,10 +42,10 @@ var present: Boolean
 }
 
 @JsName("Collapsible")
-external val Collapsible: react.FC<CollapsibleProps>
+internal external val Collapsible: react.FC<CollapsibleProps>
 
 @JsName("CollapsibleTrigger")
-external val CollapsibleTrigger: react.FC<CollapsibleTriggerProps>
+internal external val CollapsibleTrigger: react.FC<CollapsibleTriggerProps>
 
 @JsName("CollapsibleContent")
-external val CollapsibleContent: react.FC<CollapsibleContentProps>
+internal external val CollapsibleContent: react.FC<CollapsibleContentProps>

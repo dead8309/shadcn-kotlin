@@ -14,4 +14,4 @@ react.PropsWithClassName {
 }
 
 @JsName("Label")
-external val Label: react.FC<LabelProps>
+internal external val Label: react.FC<LabelProps>

@@ -37,7 +37,7 @@ var active: Boolean?
 }
 
 @JsName("RovingFocusGroup")
-external val RovingFocusGroup: react.FC<RovingFocusGroupProps>
+internal external val RovingFocusGroup: react.FC<RovingFocusGroupProps>
 
 @JsName("RovingFocusGroupItem")
-external val RovingFocusGroupItem: react.FC<dynamic>
+internal external val RovingFocusGroupItem: react.FC<dynamic>

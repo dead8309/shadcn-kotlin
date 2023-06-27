@@ -114,19 +114,19 @@ react.PropsWithClassName {
 }
 
 @JsName("TooltipProvider")
-external val TooltipProvider: react.FC<TooltipProviderProps>
+internal external val TooltipProvider: react.FC<TooltipProviderProps>
 
 @JsName("Tooltip")
-external val Tooltip: react.FC<TooltipProps>
+internal external val Tooltip: react.FC<TooltipProps>
 
 @JsName("TooltipTrigger")
-external val TooltipTrigger: react.FC<TooltipTriggerProps>
+internal external val TooltipTrigger: react.FC<TooltipTriggerProps>
 
 @JsName("TooltipPortal")
-external val TooltipPortal: react.FC<TooltipPortalProps>
+internal external val TooltipPortal: react.FC<TooltipPortalProps>
 
 @JsName("TooltipContent")
-external val TooltipContent: react.FC<TooltipContentProps>
+internal external val TooltipContent: react.FC<TooltipContentProps>
 
 @JsName("TooltipArrow")
-external val TooltipArrow: react.FC<TooltipArrowProps>
+internal external val TooltipArrow: react.FC<TooltipArrowProps>

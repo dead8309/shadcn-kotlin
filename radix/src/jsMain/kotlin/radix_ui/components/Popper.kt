@@ -52,13 +52,13 @@ react.PropsWithClassName {
 }
 
 @JsName("Popper")
-external val Popper: react.FC<PopperProps>
+internal external val Popper: react.FC<PopperProps>
 
 @JsName("PopperAnchor")
-external val PopperAnchor: react.FC<PopperAnchorProps>
+internal external val PopperAnchor: react.FC<PopperAnchorProps>
 
 @JsName("PopperContent")
-external val PopperContent: react.FC<PopperContentProps>
+internal external val PopperContent: react.FC<PopperContentProps>
 
 @JsName("PopperArrow")
-external val PopperArrow: react.FC<PopperArrowProps>
+internal external val PopperArrow: react.FC<PopperArrowProps>

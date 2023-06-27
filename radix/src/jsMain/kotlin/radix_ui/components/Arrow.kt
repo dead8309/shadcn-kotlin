@@ -14,4 +14,4 @@ react.PropsWithClassName {
 }
 
 @JsName("Arrow")
-external val Arrow: react.FC<ArrowProps>
+internal external val Arrow: react.FC<ArrowProps>

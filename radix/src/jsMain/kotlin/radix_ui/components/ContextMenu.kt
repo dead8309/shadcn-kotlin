@@ -116,49 +116,49 @@ react.PropsWithClassName {
 }
 
 @JsName("ContextMenu")
-external val ContextMenu: react.FC<ContextMenuProps>
+internal external val ContextMenu: react.FC<ContextMenuProps>
 
 @JsName("ContextMenuTrigger")
-external val ContextMenuTrigger: react.FC<ContextMenuTriggerProps>
+internal external val ContextMenuTrigger: react.FC<ContextMenuTriggerProps>
 
 @JsName("ContextMenuPortal")
-external val ContextMenuPortal: react.FC<ContextMenuPortalProps>
+internal external val ContextMenuPortal: react.FC<ContextMenuPortalProps>
 
 @JsName("ContextMenuContent")
-external val ContextMenuContent: react.FC<ContextMenuContentProps>
+internal external val ContextMenuContent: react.FC<ContextMenuContentProps>
 
 @JsName("ContextMenuGroup")
-external val ContextMenuGroup: react.FC<ContextMenuGroupProps>
+internal external val ContextMenuGroup: react.FC<ContextMenuGroupProps>
 
 @JsName("ContextMenuLabel")
-external val ContextMenuLabel: react.FC<ContextMenuLabelProps>
+internal external val ContextMenuLabel: react.FC<ContextMenuLabelProps>
 
 @JsName("ContextMenuItem")
-external val ContextMenuItem: react.FC<ContextMenuItemProps>
+internal external val ContextMenuItem: react.FC<ContextMenuItemProps>
 
 @JsName("ContextMenuCheckboxItem")
-external val ContextMenuCheckboxItem: react.FC<ContextMenuCheckboxItemProps>
+internal external val ContextMenuCheckboxItem: react.FC<ContextMenuCheckboxItemProps>
 
 @JsName("ContextMenuRadioGroup")
-external val ContextMenuRadioGroup: react.FC<ContextMenuRadioGroupProps>
+internal external val ContextMenuRadioGroup: react.FC<ContextMenuRadioGroupProps>
 
 @JsName("ContextMenuRadioItem")
-external val ContextMenuRadioItem: react.FC<ContextMenuRadioItemProps>
+internal external val ContextMenuRadioItem: react.FC<ContextMenuRadioItemProps>
 
 @JsName("ContextMenuItemIndicator")
-external val ContextMenuItemIndicator: react.FC<ContextMenuItemIndicatorProps>
+internal external val ContextMenuItemIndicator: react.FC<ContextMenuItemIndicatorProps>
 
 @JsName("ContextMenuSeparator")
-external val ContextMenuSeparator: react.FC<ContextMenuSeparatorProps>
+internal external val ContextMenuSeparator: react.FC<ContextMenuSeparatorProps>
 
 @JsName("ContextMenuArrow")
-external val ContextMenuArrow: react.FC<ContextMenuArrowProps>
+internal external val ContextMenuArrow: react.FC<ContextMenuArrowProps>
 
 @JsName("ContextMenuSub")
-external val ContextMenuSub: react.FC<ContextMenuSubProps>
+internal external val ContextMenuSub: react.FC<ContextMenuSubProps>
 
 @JsName("ContextMenuSubTrigger")
-external val ContextMenuSubTrigger: react.FC<ContextMenuSubTriggerProps>
+internal external val ContextMenuSubTrigger: react.FC<ContextMenuSubTriggerProps>
 
 @JsName("ContextMenuSubContent")
-external val ContextMenuSubContent: react.FC<ContextMenuSubContentProps>
+internal external val ContextMenuSubContent: react.FC<ContextMenuSubContentProps>

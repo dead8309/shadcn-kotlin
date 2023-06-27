@@ -66,10 +66,10 @@ react.PropsWithClassName {
 }
 
 @JsName("RadioGroup")
-external val RadioGroup: react.FC<RadioGroupProps>
+internal external val RadioGroup: react.FC<RadioGroupProps>
 
 @JsName("RadioGroupItem")
-external val RadioGroupItem: react.FC<RadioGroupItemProps>
+internal external val RadioGroupItem: react.FC<RadioGroupItemProps>
 
 @JsName("RadioGroupIndicator")
-external val RadioGroupIndicator: react.FC<RadioGroupIndicatorProps>
+internal external val RadioGroupIndicator: react.FC<RadioGroupIndicatorProps>

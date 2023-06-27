@@ -30,7 +30,7 @@ react.PropsWithClassName {
 }
 
 @JsName("Switch")
-external val Switch: react.FC<SwitchProps>
+internal external val Switch: react.FC<SwitchProps>
 
 @JsName("SwitchThumb")
-external val SwitchThumb: react.FC<SwitchThumbProps>
+internal external val SwitchThumb: react.FC<SwitchThumbProps>

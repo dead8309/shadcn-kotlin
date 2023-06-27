@@ -39,4 +39,4 @@ var onUnmountAutoFocus: ((event: Event)->Unit)?
 }
 
 @JsName("FocusScope")
-external val FocusScope: react.FC<FocusScopeProps>
+internal external val FocusScope: react.FC<FocusScopeProps>

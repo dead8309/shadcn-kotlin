@@ -175,28 +175,28 @@ react.PropsWithClassName {
 }
 
 @JsName("NavigationMenu")
-external val NavigationMenu: react.FC<NavigationMenuProps>
+internal external val NavigationMenu: react.FC<NavigationMenuProps>
 
 @JsName("NavigationMenuSub")
-external val NavigationMenuSub: react.FC<NavigationMenuSubProps>
+internal external val NavigationMenuSub: react.FC<NavigationMenuSubProps>
 
 @JsName("NavigationMenuList")
-external val NavigationMenuList: react.FC<NavigationMenuListProps>
+internal external val NavigationMenuList: react.FC<NavigationMenuListProps>
 
 @JsName("NavigationMenuItem")
-external val NavigationMenuItem: react.FC<NavigationMenuItemProps>
+internal external val NavigationMenuItem: react.FC<NavigationMenuItemProps>
 
 @JsName("NavigationMenuTrigger")
-external val NavigationMenuTrigger: react.FC<NavigationMenuTriggerProps>
+internal external val NavigationMenuTrigger: react.FC<NavigationMenuTriggerProps>
 
 @JsName("NavigationMenuLink")
-external val NavigationMenuLink: react.FC<NavigationMenuLinkProps>
+internal external val NavigationMenuLink: react.FC<NavigationMenuLinkProps>
 
 @JsName("NavigationMenuIndicator")
-external val NavigationMenuIndicator: react.FC<NavigationMenuIndicatorProps>
+internal external val NavigationMenuIndicator: react.FC<NavigationMenuIndicatorProps>
 
 @JsName("NavigationMenuContent")
-external val NavigationMenuContent: react.FC<NavigationMenuContentProps>
+internal external val NavigationMenuContent: react.FC<NavigationMenuContentProps>
 
 @JsName("NavigationMenuViewport")
-external val NavigationMenuViewport: react.FC<NavigationMenuViewportProps>
+internal external val NavigationMenuViewport: react.FC<NavigationMenuViewportProps>

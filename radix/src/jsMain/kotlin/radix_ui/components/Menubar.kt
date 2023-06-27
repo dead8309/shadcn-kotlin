@@ -130,49 +130,49 @@ react.PropsWithClassName {
 }
 
 @JsName("Menubar")
-external val Menubar: react.FC<MenubarProps>
+internal external val Menubar: react.FC<MenubarProps>
 
 @JsName("MenubarTrigger")
-external val MenubarTrigger: react.FC<MenubarTriggerProps>
+internal external val MenubarTrigger: react.FC<MenubarTriggerProps>
 
 @JsName("MenubarPortal")
-external val MenubarPortal: react.FC<MenubarPortalProps>
+internal external val MenubarPortal: react.FC<MenubarPortalProps>
 
 @JsName("MenubarContent")
-external val MenubarContent: react.FC<MenubarContentProps>
+internal external val MenubarContent: react.FC<MenubarContentProps>
 
 @JsName("MenubarGroup")
-external val MenubarGroup: react.FC<MenubarGroupProps>
+internal external val MenubarGroup: react.FC<MenubarGroupProps>
 
 @JsName("MenubarLabel")
-external val MenubarLabel: react.FC<MenubarLabelProps>
+internal external val MenubarLabel: react.FC<MenubarLabelProps>
 
 @JsName("MenubarItem")
-external val MenubarItem: react.FC<MenubarItemProps>
+internal external val MenubarItem: react.FC<MenubarItemProps>
 
 @JsName("MenubarCheckboxItem")
-external val MenubarCheckboxItem: react.FC<MenubarCheckboxItemProps>
+internal external val MenubarCheckboxItem: react.FC<MenubarCheckboxItemProps>
 
 @JsName("MenubarRadioGroup")
-external val MenubarRadioGroup: react.FC<MenubarRadioGroupProps>
+internal external val MenubarRadioGroup: react.FC<MenubarRadioGroupProps>
 
 @JsName("MenubarRadioItem")
-external val MenubarRadioItem: react.FC<MenubarRadioItemProps>
+internal external val MenubarRadioItem: react.FC<MenubarRadioItemProps>
 
 @JsName("MenubarItemIndicator")
-external val MenubarItemIndicator: react.FC<MenubarItemIndicatorProps>
+internal external val MenubarItemIndicator: react.FC<MenubarItemIndicatorProps>
 
 @JsName("MenubarSeparator")
-external val MenubarSeparator: react.FC<MenubarSeparatorProps>
+internal external val MenubarSeparator: react.FC<MenubarSeparatorProps>
 
 @JsName("MenubarArrow")
-external val MenubarArrow: react.FC<MenubarArrowProps>
+internal external val MenubarArrow: react.FC<MenubarArrowProps>
 
 @JsName("MenubarSub")
-external val MenubarSub: react.FC<MenubarSubProps>
+internal external val MenubarSub: react.FC<MenubarSubProps>
 
 @JsName("MenubarSubTrigger")
-external val MenubarSubTrigger: react.FC<MenubarSubTriggerProps>
+internal external val MenubarSubTrigger: react.FC<MenubarSubTriggerProps>
 
 @JsName("MenubarSubContent")
-external val MenubarSubContent: react.FC<MenubarSubContentProps>
+internal external val MenubarSubContent: react.FC<MenubarSubContentProps>

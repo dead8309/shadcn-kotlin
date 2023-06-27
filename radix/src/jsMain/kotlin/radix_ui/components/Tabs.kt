@@ -67,13 +67,13 @@ var forceMount: Boolean? /* true */
 }
 
 @JsName("Tabs")
-external val Tabs: react.FC<TabsProps>
+internal external val Tabs: react.FC<TabsProps>
 
 @JsName("TabsList")
-external val TabsList: react.FC<TabsListProps>
+internal external val TabsList: react.FC<TabsListProps>
 
 @JsName("TabsTrigger")
-external val TabsTrigger: react.FC<TabsTriggerProps>
+internal external val TabsTrigger: react.FC<TabsTriggerProps>
 
 @JsName("TabsContent")
-external val TabsContent: react.FC<TabsContentProps>
+internal external val TabsContent: react.FC<TabsContentProps>

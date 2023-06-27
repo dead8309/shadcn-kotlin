@@ -118,16 +118,16 @@ var onDragScroll: dynamic
 }
 
 @JsName("ScrollArea")
-external val ScrollArea: react.FC<ScrollAreaProps>
+internal external val ScrollArea: react.FC<ScrollAreaProps>
 
 @JsName("ScrollAreaViewport")
-external val ScrollAreaViewport: react.FC<ScrollAreaViewportProps>
+internal external val ScrollAreaViewport: react.FC<ScrollAreaViewportProps>
 
 @JsName("ScrollAreaScrollbar")
-external val ScrollAreaScrollbar: react.FC<ScrollAreaScrollbarProps>
+internal external val ScrollAreaScrollbar: react.FC<ScrollAreaScrollbarProps>
 
 @JsName("ScrollAreaThumb")
-external val ScrollAreaThumb: react.FC<ScrollAreaThumbProps>
+internal external val ScrollAreaThumb: react.FC<ScrollAreaThumbProps>
 
 @JsName("ScrollAreaCorner")
-external val ScrollAreaCorner: react.FC<ScrollAreaCornerProps>
+internal external val ScrollAreaCorner: react.FC<ScrollAreaCornerProps>

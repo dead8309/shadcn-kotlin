@@ -29,4 +29,4 @@ var onPressedChange: dynamic
 }
 
 @JsName("Toggle")
-external val Toggle: react.FC<ToggleProps>
+internal external val Toggle: react.FC<ToggleProps>

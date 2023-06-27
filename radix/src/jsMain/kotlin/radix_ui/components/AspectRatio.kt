@@ -14,4 +14,4 @@ var ratio: Number?
 }
 
 @JsName("AspectRatio")
-external val AspectRatio: react.FC<AspectRatioProps>
+internal external val AspectRatio: react.FC<AspectRatioProps>

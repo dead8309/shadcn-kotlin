@@ -26,10 +26,10 @@ var delayMs: Number?
 }
 
 @JsName("Avatar")
-external val Avatar: react.FC<AvatarProps>
+internal external val Avatar: react.FC<AvatarProps>
 
 @JsName("AvatarImage")
-external val AvatarImage: react.FC<AvatarImageProps>
+internal external val AvatarImage: react.FC<AvatarImageProps>
 
 @JsName("AvatarFallback")
-external val AvatarFallback: react.FC<AvatarFallbackProps>
+internal external val AvatarFallback: react.FC<AvatarFallbackProps>

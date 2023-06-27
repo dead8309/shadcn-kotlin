@@ -106,16 +106,16 @@ react.PropsWithClassName {
 }
 
 @JsName("Accordion")
-external val Accordion: react.FC<AccordionProps>
+internal external val Accordion: react.FC<dynamic>
 
 @JsName("AccordionItem")
-external val AccordionItem: react.FC<AccordionItemProps>
+internal external val AccordionItem: react.FC<AccordionItemProps>
 
 @JsName("AccordionHeader")
-external val AccordionHeader: react.FC<AccordionHeaderProps>
+internal external val AccordionHeader: react.FC<AccordionHeaderProps>
 
 @JsName("AccordionTrigger")
-external val AccordionTrigger: react.FC<AccordionTriggerProps>
+internal external val AccordionTrigger: react.FC<AccordionTriggerProps>
 
 @JsName("AccordionContent")
-external val AccordionContent: react.FC<AccordionContentProps>
+internal external val AccordionContent: react.FC<AccordionContentProps>

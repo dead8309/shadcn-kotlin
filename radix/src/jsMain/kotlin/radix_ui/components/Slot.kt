@@ -16,4 +16,4 @@ override var children: react.ReactNode?
 }
 
 @JsName("Slot")
-external val Slot: react.FC<SlotProps>
+internal external val Slot: react.FC<SlotProps>

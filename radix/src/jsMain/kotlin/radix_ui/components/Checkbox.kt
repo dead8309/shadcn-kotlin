@@ -34,7 +34,7 @@ var forceMount: Boolean? /* true */
 }
 
 @JsName("Checkbox")
-external val Checkbox: react.FC<CheckboxProps>
+internal external val Checkbox: react.FC<CheckboxProps>
 
 @JsName("CheckboxIndicator")
-external val CheckboxIndicator: react.FC<CheckboxIndicatorProps>
+internal external val CheckboxIndicator: react.FC<CheckboxIndicatorProps>

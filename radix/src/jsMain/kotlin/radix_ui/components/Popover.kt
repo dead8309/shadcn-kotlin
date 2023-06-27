@@ -102,22 +102,22 @@ react.PropsWithClassName {
 }
 
 @JsName("Popover")
-external val Popover: react.FC<PopoverProps>
+internal external val Popover: react.FC<PopoverProps>
 
 @JsName("PopoverAnchor")
-external val PopoverAnchor: react.FC<PopoverAnchorProps>
+internal external val PopoverAnchor: react.FC<PopoverAnchorProps>
 
 @JsName("PopoverTrigger")
-external val PopoverTrigger: react.FC<PopoverTriggerProps>
+internal external val PopoverTrigger: react.FC<PopoverTriggerProps>
 
 @JsName("PopoverPortal")
-external val PopoverPortal: react.FC<PopoverPortalProps>
+internal external val PopoverPortal: react.FC<PopoverPortalProps>
 
 @JsName("PopoverContent")
-external val PopoverContent: react.FC<PopoverContentProps>
+internal external val PopoverContent: react.FC<PopoverContentProps>
 
 @JsName("PopoverClose")
-external val PopoverClose: react.FC<PopoverCloseProps>
+internal external val PopoverClose: react.FC<PopoverCloseProps>
 
 @JsName("PopoverArrow")
-external val PopoverArrow: react.FC<PopoverArrowProps>
+internal external val PopoverArrow: react.FC<PopoverArrowProps>

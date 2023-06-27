@@ -182,49 +182,49 @@ var onPlaced: dynamic
 }
 
 @JsName("Select")
-external val Select: react.FC<SelectProps>
+internal external val Select: react.FC<SelectProps>
 
 @JsName("SelectTrigger")
-external val SelectTrigger: react.FC<SelectTriggerProps>
+internal external val SelectTrigger: react.FC<SelectTriggerProps>
 
 @JsName("SelectValue")
-external val SelectValue: react.FC<SelectValueProps>
+internal external val SelectValue: react.FC<SelectValueProps>
 
 @JsName("SelectIcon")
-external val SelectIcon: react.FC<SelectIconProps>
+internal external val SelectIcon: react.FC<SelectIconProps>
 
 @JsName("SelectPortal")
-external val SelectPortal: react.FC<SelectPortalProps>
+internal external val SelectPortal: react.FC<SelectPortalProps>
 
 @JsName("SelectContent")
-external val SelectContent: react.FC<SelectContentProps>
+internal external val SelectContent: react.FC<SelectContentProps>
 
 @JsName("SelectViewport")
-external val SelectViewport: react.FC<SelectViewportProps>
+internal external val SelectViewport: react.FC<SelectViewportProps>
 
 @JsName("SelectGroup")
-external val SelectGroup: react.FC<SelectGroupProps>
+internal external val SelectGroup: react.FC<SelectGroupProps>
 
 @JsName("SelectLabel")
-external val SelectLabel: react.FC<SelectLabelProps>
+internal external val SelectLabel: react.FC<SelectLabelProps>
 
 @JsName("SelectItem")
-external val SelectItem: react.FC<SelectItemProps>
+internal external val SelectItem: react.FC<SelectItemProps>
 
 @JsName("SelectItemText")
-external val SelectItemText: react.FC<SelectItemTextProps>
+internal external val SelectItemText: react.FC<SelectItemTextProps>
 
 @JsName("SelectItemIndicator")
-external val SelectItemIndicator: react.FC<SelectItemIndicatorProps>
+internal external val SelectItemIndicator: react.FC<SelectItemIndicatorProps>
 
 @JsName("SelectScrollUpButton")
-external val SelectScrollUpButton: react.FC<SelectScrollUpButtonProps>
+internal external val SelectScrollUpButton: react.FC<SelectScrollUpButtonProps>
 
 @JsName("SelectScrollDownButton")
-external val SelectScrollDownButton: react.FC<SelectScrollDownButtonProps>
+internal external val SelectScrollDownButton: react.FC<SelectScrollDownButtonProps>
 
 @JsName("SelectSeparator")
-external val SelectSeparator: react.FC<SelectSeparatorProps>
+internal external val SelectSeparator: react.FC<SelectSeparatorProps>
 
 @JsName("SelectArrow")
-external val SelectArrow: react.FC<SelectArrowProps>
+internal external val SelectArrow: react.FC<SelectArrowProps>

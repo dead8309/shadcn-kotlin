@@ -12,4 +12,4 @@ var present: Boolean
 }
 
 @JsName("Presence")
-external val Presence: react.FC<PresenceProps>
+internal external val Presence: react.FC<PresenceProps>

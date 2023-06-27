@@ -89,16 +89,16 @@ react.PropsWithClassName {
 }
 
 @JsName("HoverCard")
-external val HoverCard: react.FC<HoverCardProps>
+internal external val HoverCard: react.FC<HoverCardProps>
 
 @JsName("HoverCardTrigger")
-external val HoverCardTrigger: react.FC<HoverCardTriggerProps>
+internal external val HoverCardTrigger: react.FC<HoverCardTriggerProps>
 
 @JsName("HoverCardPortal")
-external val HoverCardPortal: react.FC<HoverCardPortalProps>
+internal external val HoverCardPortal: react.FC<HoverCardPortalProps>
 
 @JsName("HoverCardContent")
-external val HoverCardContent: react.FC<HoverCardContentProps>
+internal external val HoverCardContent: react.FC<HoverCardContentProps>
 
 @JsName("HoverCardArrow")
-external val HoverCardArrow: react.FC<HoverCardArrowProps>
+internal external val HoverCardArrow: react.FC<HoverCardArrowProps>

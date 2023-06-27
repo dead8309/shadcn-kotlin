@@ -14,4 +14,4 @@ react.PropsWithClassName {
 }
 
 @JsName("VisuallyHidden")
-external val VisuallyHidden: react.FC<VisuallyHiddenProps>
+internal external val VisuallyHidden: react.FC<VisuallyHiddenProps>

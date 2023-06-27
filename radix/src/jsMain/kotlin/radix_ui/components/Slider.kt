@@ -125,13 +125,13 @@ var onStepKeyDown: dynamic
 }
 
 @JsName("Slider")
-external val Slider: react.FC<SliderProps>
+internal external val Slider: react.FC<SliderProps>
 
 @JsName("SliderTrack")
-external val SliderTrack: react.FC<SliderTrackProps>
+internal external val SliderTrack: react.FC<SliderTrackProps>
 
 @JsName("SliderRange")
-external val SliderRange: react.FC<SliderRangeProps>
+internal external val SliderRange: react.FC<SliderRangeProps>
 
 @JsName("SliderThumb")
-external val SliderThumb: react.FC<SliderThumbProps>
+internal external val SliderThumb: react.FC<SliderThumbProps>

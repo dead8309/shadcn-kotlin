@@ -119,25 +119,25 @@ react.PropsWithClassName {
 }
 
 @JsName("Dialog")
-external val Dialog: react.FC<DialogProps>
+internal external val Dialog: react.FC<DialogProps>
 
 @JsName("DialogTrigger")
-external val DialogTrigger: react.FC<DialogTriggerProps>
+internal external val DialogTrigger: react.FC<DialogTriggerProps>
 
 @JsName("DialogPortal")
-external val DialogPortal: react.FC<DialogPortalProps>
+internal external val DialogPortal: react.FC<DialogPortalProps>
 
 @JsName("DialogOverlay")
-external val DialogOverlay: react.FC<DialogOverlayProps>
+internal external val DialogOverlay: react.FC<DialogOverlayProps>
 
 @JsName("DialogContent")
-external val DialogContent: react.FC<DialogContentProps>
+internal external val DialogContent: react.FC<DialogContentProps>
 
 @JsName("DialogTitle")
-external val DialogTitle: react.FC<DialogTitleProps>
+internal external val DialogTitle: react.FC<DialogTitleProps>
 
 @JsName("DialogDescription")
-external val DialogDescription: react.FC<DialogDescriptionProps>
+internal external val DialogDescription: react.FC<DialogDescriptionProps>
 
 @JsName("DialogClose")
-external val DialogClose: react.FC<DialogCloseProps>
+internal external val DialogClose: react.FC<DialogCloseProps>

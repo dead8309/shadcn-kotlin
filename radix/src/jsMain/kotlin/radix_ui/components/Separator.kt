@@ -23,4 +23,4 @@ var decorative: Boolean?
 }
 
 @JsName("Separator")
-external val Separator: react.FC<SeparatorProps>
+internal external val Separator: react.FC<SeparatorProps>

@@ -118,49 +118,49 @@ react.PropsWithClassName {
 }
 
 @JsName("DropdownMenu")
-external val DropdownMenu: react.FC<DropdownMenuProps>
+internal external val DropdownMenu: react.FC<DropdownMenuProps>
 
 @JsName("DropdownMenuTrigger")
-external val DropdownMenuTrigger: react.FC<DropdownMenuTriggerProps>
+internal external val DropdownMenuTrigger: react.FC<DropdownMenuTriggerProps>
 
 @JsName("DropdownMenuPortal")
-external val DropdownMenuPortal: react.FC<DropdownMenuPortalProps>
+internal external val DropdownMenuPortal: react.FC<DropdownMenuPortalProps>
 
 @JsName("DropdownMenuContent")
-external val DropdownMenuContent: react.FC<DropdownMenuContentProps>
+internal external val DropdownMenuContent: react.FC<DropdownMenuContentProps>
 
 @JsName("DropdownMenuGroup")
-external val DropdownMenuGroup: react.FC<DropdownMenuGroupProps>
+internal external val DropdownMenuGroup: react.FC<DropdownMenuGroupProps>
 
 @JsName("DropdownMenuLabel")
-external val DropdownMenuLabel: react.FC<DropdownMenuLabelProps>
+internal external val DropdownMenuLabel: react.FC<DropdownMenuLabelProps>
 
 @JsName("DropdownMenuItem")
-external val DropdownMenuItem: react.FC<DropdownMenuItemProps>
+internal external val DropdownMenuItem: react.FC<DropdownMenuItemProps>
 
 @JsName("DropdownMenuCheckboxItem")
-external val DropdownMenuCheckboxItem: react.FC<DropdownMenuCheckboxItemProps>
+internal external val DropdownMenuCheckboxItem: react.FC<DropdownMenuCheckboxItemProps>
 
 @JsName("DropdownMenuRadioGroup")
-external val DropdownMenuRadioGroup: react.FC<DropdownMenuRadioGroupProps>
+internal external val DropdownMenuRadioGroup: react.FC<DropdownMenuRadioGroupProps>
 
 @JsName("DropdownMenuRadioItem")
-external val DropdownMenuRadioItem: react.FC<DropdownMenuRadioItemProps>
+internal external val DropdownMenuRadioItem: react.FC<DropdownMenuRadioItemProps>
 
 @JsName("DropdownMenuItemIndicator")
-external val DropdownMenuItemIndicator: react.FC<DropdownMenuItemIndicatorProps>
+internal external val DropdownMenuItemIndicator: react.FC<DropdownMenuItemIndicatorProps>
 
 @JsName("DropdownMenuSeparator")
-external val DropdownMenuSeparator: react.FC<DropdownMenuSeparatorProps>
+internal external val DropdownMenuSeparator: react.FC<DropdownMenuSeparatorProps>
 
 @JsName("DropdownMenuArrow")
-external val DropdownMenuArrow: react.FC<DropdownMenuArrowProps>
+internal external val DropdownMenuArrow: react.FC<DropdownMenuArrowProps>
 
 @JsName("DropdownMenuSub")
-external val DropdownMenuSub: react.FC<DropdownMenuSubProps>
+internal external val DropdownMenuSub: react.FC<DropdownMenuSubProps>
 
 @JsName("DropdownMenuSubTrigger")
-external val DropdownMenuSubTrigger: react.FC<DropdownMenuSubTriggerProps>
+internal external val DropdownMenuSubTrigger: react.FC<DropdownMenuSubTriggerProps>
 
 @JsName("DropdownMenuSubContent")
-external val DropdownMenuSubContent: react.FC<DropdownMenuSubContentProps>
+internal external val DropdownMenuSubContent: react.FC<DropdownMenuSubContentProps>

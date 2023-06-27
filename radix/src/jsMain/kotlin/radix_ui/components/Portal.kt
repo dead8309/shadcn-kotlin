@@ -14,4 +14,4 @@ var container: dynamic
 }
 
 @JsName("Portal")
-external val Portal: react.FC<PortalProps>
+internal external val Portal: react.FC<PortalProps>

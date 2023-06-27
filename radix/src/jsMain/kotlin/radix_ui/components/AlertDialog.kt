@@ -60,28 +60,28 @@ react.PropsWithClassName {
 }
 
 @JsName("AlertDialog")
-external val AlertDialog: react.FC<AlertDialogProps>
+internal external val AlertDialog: react.FC<AlertDialogProps>
 
 @JsName("AlertDialogTrigger")
-external val AlertDialogTrigger: react.FC<AlertDialogTriggerProps>
+internal external val AlertDialogTrigger: react.FC<AlertDialogTriggerProps>
 
 @JsName("AlertDialogPortal")
-external val AlertDialogPortal: react.FC<AlertDialogPortalProps>
+internal external val AlertDialogPortal: react.FC<AlertDialogPortalProps>
 
 @JsName("AlertDialogOverlay")
-external val AlertDialogOverlay: react.FC<AlertDialogOverlayProps>
+internal external val AlertDialogOverlay: react.FC<AlertDialogOverlayProps>
 
 @JsName("AlertDialogContent")
-external val AlertDialogContent: react.FC<AlertDialogContentProps>
+internal external val AlertDialogContent: react.FC<AlertDialogContentProps>
 
 @JsName("AlertDialogTitle")
-external val AlertDialogTitle: react.FC<AlertDialogTitleProps>
+internal external val AlertDialogTitle: react.FC<AlertDialogTitleProps>
 
 @JsName("AlertDialogDescription")
-external val AlertDialogDescription: react.FC<AlertDialogDescriptionProps>
+internal external val AlertDialogDescription: react.FC<AlertDialogDescriptionProps>
 
 @JsName("AlertDialogAction")
-external val AlertDialogAction: react.FC<AlertDialogActionProps>
+internal external val AlertDialogAction: react.FC<AlertDialogActionProps>
 
 @JsName("AlertDialogCancel")
-external val AlertDialogCancel: react.FC<AlertDialogCancelProps>
+internal external val AlertDialogCancel: react.FC<AlertDialogCancelProps>

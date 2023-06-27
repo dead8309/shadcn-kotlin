@@ -56,7 +56,7 @@ react.PropsWithClassName {
 }
 
 @JsName("DismissableLayer")
-external val DismissableLayer: react.FC<DismissableLayerProps>
+internal external val DismissableLayer: react.FC<DismissableLayerProps>
 
 @JsName("DismissableLayerBranch")
-external val DismissableLayerBranch: react.FC<DismissableLayerBranchProps>
+internal external val DismissableLayerBranch: react.FC<DismissableLayerBranchProps>

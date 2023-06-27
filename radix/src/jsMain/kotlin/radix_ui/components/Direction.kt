@@ -14,4 +14,4 @@ var dir: String
 }
 
 @JsName("DirectionProvider")
-external val DirectionProvider: react.FC<DirectionProviderProps>
+internal external val DirectionProvider: react.FC<DirectionProviderProps>

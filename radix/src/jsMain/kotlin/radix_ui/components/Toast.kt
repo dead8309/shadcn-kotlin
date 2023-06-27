@@ -139,22 +139,22 @@ var onClose: dynamic
 }
 
 @JsName("ToastProvider")
-external val ToastProvider: react.FC<ToastProviderProps>
+internal external val ToastProvider: react.FC<ToastProviderProps>
 
 @JsName("ToastViewport")
-external val ToastViewport: react.FC<ToastViewportProps>
+internal external val ToastViewport: react.FC<ToastViewportProps>
 
 @JsName("Toast")
-external val Toast: react.FC<ToastProps>
+internal external val Toast: react.FC<ToastProps>
 
 @JsName("ToastTitle")
-external val ToastTitle: react.FC<ToastTitleProps>
+internal external val ToastTitle: react.FC<ToastTitleProps>
 
 @JsName("ToastDescription")
-external val ToastDescription: react.FC<ToastDescriptionProps>
+internal external val ToastDescription: react.FC<ToastDescriptionProps>
 
 @JsName("ToastAction")
-external val ToastAction: react.FC<ToastActionProps>
+internal external val ToastAction: react.FC<ToastActionProps>
 
 @JsName("ToastClose")
-external val ToastClose: react.FC<ToastCloseProps>
+internal external val ToastClose: react.FC<ToastCloseProps>

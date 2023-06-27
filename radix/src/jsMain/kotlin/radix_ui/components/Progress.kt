@@ -24,7 +24,7 @@ react.PropsWithClassName {
 }
 
 @JsName("Progress")
-external val Progress: react.FC<ProgressProps>
+internal external val Progress: react.FC<ProgressProps>
 
 @JsName("ProgressIndicator")
-external val ProgressIndicator: react.FC<ProgressIndicatorProps>
+internal external val ProgressIndicator: react.FC<ProgressIndicatorProps>

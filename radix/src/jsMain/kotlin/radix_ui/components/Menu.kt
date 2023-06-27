@@ -204,49 +204,49 @@ var trapFocus: dynamic
 }
 
 @JsName("Menu")
-external val Menu: react.FC<MenuProps>
+internal external val Menu: react.FC<MenuProps>
 
 @JsName("MenuAnchor")
-external val MenuAnchor: react.FC<MenuAnchorProps>
+internal external val MenuAnchor: react.FC<MenuAnchorProps>
 
 @JsName("MenuPortal")
-external val MenuPortal: react.FC<MenuPortalProps>
+internal external val MenuPortal: react.FC<MenuPortalProps>
 
 @JsName("MenuContent")
-external val MenuContent: react.FC<MenuContentProps>
+internal external val MenuContent: react.FC<MenuContentProps>
 
 @JsName("MenuGroup")
-external val MenuGroup: react.FC<MenuGroupProps>
+internal external val MenuGroup: react.FC<MenuGroupProps>
 
 @JsName("MenuLabel")
-external val MenuLabel: react.FC<MenuLabelProps>
+internal external val MenuLabel: react.FC<MenuLabelProps>
 
 @JsName("MenuItem")
-external val MenuItem: react.FC<MenuItemProps>
+internal external val MenuItem: react.FC<MenuItemProps>
 
 @JsName("MenuCheckboxItem")
-external val MenuCheckboxItem: react.FC<MenuCheckboxItemProps>
+internal external val MenuCheckboxItem: react.FC<MenuCheckboxItemProps>
 
 @JsName("MenuRadioGroup")
-external val MenuRadioGroup: react.FC<MenuRadioGroupProps>
+internal external val MenuRadioGroup: react.FC<MenuRadioGroupProps>
 
 @JsName("MenuRadioItem")
-external val MenuRadioItem: react.FC<MenuRadioItemProps>
+internal external val MenuRadioItem: react.FC<MenuRadioItemProps>
 
 @JsName("MenuItemIndicator")
-external val MenuItemIndicator: react.FC<MenuItemIndicatorProps>
+internal external val MenuItemIndicator: react.FC<MenuItemIndicatorProps>
 
 @JsName("MenuSeparator")
-external val MenuSeparator: react.FC<MenuSeparatorProps>
+internal external val MenuSeparator: react.FC<MenuSeparatorProps>
 
 @JsName("MenuArrow")
-external val MenuArrow: react.FC<MenuArrowProps>
+internal external val MenuArrow: react.FC<MenuArrowProps>
 
 @JsName("MenuSub")
-external val MenuSub: react.FC<MenuSubProps>
+internal external val MenuSub: react.FC<MenuSubProps>
 
 @JsName("MenuSubTrigger")
-external val MenuSubTrigger: react.FC<MenuSubTriggerProps>
+internal external val MenuSubTrigger: react.FC<MenuSubTriggerProps>
 
 @JsName("MenuSubContent")
-external val MenuSubContent: react.FC<MenuSubContentProps>
+internal external val MenuSubContent: react.FC<MenuSubContentProps>
