@@ -52,6 +52,20 @@ val demoComponents: List<ComponentCardProps> = listOf(
         description = "An alert dialog component",
         href = "alert-dialog",
         children = AlertDialogDemo.create(),
+    ),
+    ComponentCardProps(
+        title = "Accordion",
+        description = "An accordion component",
+        href = "accordion",
+        className = "mx-auto w-[80%] py-10",
+        children = AccordionDemo.create(),
+    ),
+    ComponentCardProps(
+        title = "Progress",
+        description = "A progress component",
+        href = "progress",
+        className = "mix-blend-multiply dark:mix-blend-screen",
+        children = ProgressDemo.create(),
     )
 )
 
@@ -87,13 +101,7 @@ description= "A date picker component",
 href= "date-picker",
 children= <DatePickerDemo />,
 ),
-ComponentCardProps(
-title= "Accordion",
-description= "An accordion component",
-href= "accordion",
-className= "mx-auto w-[80%] py-10",
-children= <AccordionDemo />,
-),
+
 ComponentCardProps(
 title= "Navigation Menu",
 description= "A navigation menu component",
@@ -157,13 +165,6 @@ title= "Sheet",
 description= "A sheet component",
 href= "sheet",
 children= <SheetDemo />,
-),
-ComponentCardProps(
-title= "Progress",
-description= "A progress component",
-href= "progress",
-className= "mix-blend-multiply dark:mix-blend-screen",
-children= <ProgressDemo />,
 ),
 ComponentCardProps(
 title= "Command",
