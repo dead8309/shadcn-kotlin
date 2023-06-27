@@ -8,6 +8,7 @@ import org.example.kobwebreaxttailwind.components.react.ui.Button
 import org.example.kobwebreaxttailwind.components.react.ui.Checkbox
 import org.example.kobwebreaxttailwind.components.react.ui.Label
 import org.example.kobwebreaxttailwind.pages.components.demo.AlertDialogDemo
+import org.example.kobwebreaxttailwind.pages.components.demo.ProgressDemo
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 import react.FC
@@ -71,4 +72,5 @@ val ShadCnApp = FC<Props> {
         +"Secondary Button"
     }
     AlertDialogDemo {}
+    ProgressDemo {}
 }
