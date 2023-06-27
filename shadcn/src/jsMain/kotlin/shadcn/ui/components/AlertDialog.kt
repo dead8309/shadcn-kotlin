@@ -7,12 +7,29 @@ package shadcn.ui.components
 
 
 import radix_ui.components.*
+import react.FC
+import react.dom.html.HTMLAttributes
+import web.html.HTMLDivElement
+
+
+external interface AlertDialogHeaderProps: HTMLAttributes<HTMLDivElement> {
+    var displayName: String;
+}
+external interface AlertDialogFooterProps: HTMLAttributes<HTMLDivElement> {
+    var displayName: String;
+}
 
 @JsName("AlertDialog")
 external val AlertDialog: react.FC<AlertDialogProps>
 
 @JsName("AlertDialogTrigger")
 external val AlertDialogTrigger: react.FC<AlertDialogTriggerProps>
+
+@JsName("AlertDialogHeader")
+external val AlertDialogHeader: FC<AlertDialogHeaderProps>
+
+@JsName("AlertDialogFooter")
+external val AlertDialogFooter: FC<AlertDialogFooterProps>
 
 @JsName("AlertDialogContent")
 external val AlertDialogContent: react.FC<AlertDialogContentProps>

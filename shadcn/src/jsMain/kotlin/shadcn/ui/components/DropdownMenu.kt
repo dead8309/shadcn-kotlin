@@ -7,6 +7,9 @@ package shadcn.ui.components
 
 
 import radix_ui.components.*
+import react.FC
+import react.dom.html.HTMLAttributes
+import web.html.HTMLSpanElement
 
 @JsName("DropdownMenu")
 external val DropdownMenu: react.FC<DropdownMenuProps>
@@ -49,3 +52,8 @@ external val DropdownMenuLabel: react.FC<DropdownMenuLabelProps>
 
 @JsName("DropdownMenuSeparator")
 external val DropdownMenuSeparator: react.FC<DropdownMenuSeparatorProps>
+
+external interface DropdownMenuShortcutProps : HTMLAttributes<HTMLSpanElement>
+
+@JsName("DropdownMenuShortcut")
+external val DropdownMenuShortcut : FC<DropdownMenuShortcutProps>
