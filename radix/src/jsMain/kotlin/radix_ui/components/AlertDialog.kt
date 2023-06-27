@@ -14,7 +14,7 @@ react.PropsWithClassName {
 external interface AlertDialogTriggerProps: 
 DialogTriggerProps,
 react.PropsWithClassName {
-
+    var asChild: Boolean?
 }
 
 external interface AlertDialogPortalProps: 

@@ -5,9 +5,7 @@
 
 package radix_ui.components
 
-import web.dom.Element
-
-external interface DropdownMenuProps: 
+external interface DropdownMenuProps:
 react.PropsWithChildren,
 react.PropsWithClassName {
 override var children: react.ReactNode?
@@ -26,7 +24,7 @@ var modal: Boolean?
 external interface DropdownMenuTriggerProps: 
 react.dom.html.ButtonHTMLAttributes<web.html.HTMLButtonElement>,
 react.PropsWithClassName {
-
+    var asChild: Boolean?
 }
 
 external interface DropdownMenuPortalProps: 
@@ -38,7 +36,7 @@ react.PropsWithClassName {
 external interface DropdownMenuContentProps: 
 MenuContentProps,
 react.PropsWithClassName {
-
+    var align: String
 }
 
 external interface DropdownMenuGroupProps: 
