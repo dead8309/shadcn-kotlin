@@ -4,9 +4,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import com.varabyte.kobweb.core.Page
 import org.example.kobwebreaxttailwind.components.layouts.PageLayout
-import org.example.kobwebreaxttailwind.components.react.ui.Button
-import org.example.kobwebreaxttailwind.components.react.ui.Checkbox
-import org.example.kobwebreaxttailwind.components.react.ui.Label
 import org.example.kobwebreaxttailwind.pages.components.demo.AlertDialogDemo
 import org.example.kobwebreaxttailwind.pages.components.demo.ProgressDemo
 import org.jetbrains.compose.web.dom.Div
@@ -17,6 +14,9 @@ import react.create
 import react.dom.client.createRoot
 import react.dom.html.ReactHTML.div
 import react.useState
+import shadcn.ui.components.Button
+import shadcn.ui.components.Checkbox
+import shadcn.ui.components.Label
 import web.cssom.ClassName
 import web.dom.document
 
@@ -44,7 +44,7 @@ val ShadCnApp = FC<Props> {
         Checkbox {
             checked = check
             defaultChecked = false
-            onCheckedChange = { setChecked(it) }
+            onCheckedChange = { it: Boolean -> setChecked(it) }
             id = "shad-check"
         }
         Label {

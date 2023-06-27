@@ -2,10 +2,10 @@ package org.example.kobwebreaxttailwind.pages.components.demo
 
 import org.example.kobwebreaxttailwind.components.react.lucide_react.Loader2
 import org.example.kobwebreaxttailwind.components.react.lucide_react.Mail
-import org.example.kobwebreaxttailwind.components.react.ui.Button
 import react.FC
 import react.Props
 import react.dom.html.ReactHTML.div
+import shadcn.ui.components.Button
 import web.cssom.ClassName
 
 val ButtonsDemo = FC<Props> {

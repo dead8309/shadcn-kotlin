@@ -1,10 +1,10 @@
 package org.example.kobwebreaxttailwind.pages.components.demo
 
-import org.example.kobwebreaxttailwind.components.react.ui.Avatar
-import org.example.kobwebreaxttailwind.components.react.ui.AvatarFallback
-import org.example.kobwebreaxttailwind.components.react.ui.AvatarImage
-import org.example.kobwebreaxttailwind.components.react.ui.AvatarProps
+import radix_ui.components.AvatarProps
 import react.FC
+import shadcn.ui.components.Avatar
+import shadcn.ui.components.AvatarFallback
+import shadcn.ui.components.AvatarImage
 
 val AvatarDemo = FC<AvatarProps> {
     Avatar {

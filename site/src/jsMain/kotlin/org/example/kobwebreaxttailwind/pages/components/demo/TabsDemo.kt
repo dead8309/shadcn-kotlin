@@ -1,9 +1,9 @@
 package org.example.kobwebreaxttailwind.pages.components.demo
 
-import org.example.kobwebreaxttailwind.components.react.ui.*
 import react.FC
 import react.Props
 import react.dom.html.ReactHTML.div
+import shadcn.ui.components.*
 import web.cssom.ClassName
 import web.html.InputType
 

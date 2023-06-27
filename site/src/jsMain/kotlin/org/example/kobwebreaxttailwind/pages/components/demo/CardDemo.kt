@@ -2,11 +2,11 @@ package org.example.kobwebreaxttailwind.pages.components.demo
 
 import org.example.kobwebreaxttailwind.components.react.lucide_react.BellRing
 import org.example.kobwebreaxttailwind.components.react.lucide_react.Check
-import org.example.kobwebreaxttailwind.components.react.ui.*
 import react.FC
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.span
+import shadcn.ui.components.*
 import web.cssom.ClassName
 
 data class Notification(

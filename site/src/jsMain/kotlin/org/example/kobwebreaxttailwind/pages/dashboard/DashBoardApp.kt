@@ -1,7 +1,6 @@
 package org.example.kobwebreaxttailwind.pages.dashboard
 
 import org.example.kobwebreaxttailwind.components.react.lucide_react.*
-import org.example.kobwebreaxttailwind.components.react.ui.*
 import react.FC
 import react.Props
 import react.VFC
@@ -11,6 +10,7 @@ import react.dom.html.ReactHTML.h2
 import react.dom.html.ReactHTML.img
 import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.span
+import shadcn.ui.components.*
 import web.cssom.ClassName
 import web.html.InputType
 

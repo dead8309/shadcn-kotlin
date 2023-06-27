@@ -1,6 +1,5 @@
 package org.example.kobwebreaxttailwind.pages.components
 
-import org.example.kobwebreaxttailwind.components.react.ui.Input
 import react.FC
 import react.Props
 import react.ReactNode
@@ -8,6 +7,7 @@ import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.h3
 import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.section
+import shadcn.ui.components.Input
 import web.cssom.ClassName
 import web.html.InputType
 

@@ -1,7 +1,8 @@
 package org.example.kobwebreaxttailwind.pages.components.demo
 
-import org.example.kobwebreaxttailwind.components.react.ui.*
+import radix_ui.components.AlertDialogProps
 import react.FC
+import shadcn.ui.components.*
 
 val AlertDialogDemo = FC<AlertDialogProps> {
     AlertDialog {

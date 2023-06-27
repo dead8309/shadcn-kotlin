@@ -1,9 +1,10 @@
 package org.example.kobwebreaxttailwind.pages.components.demo
 
 import org.example.kobwebreaxttailwind.components.react.lucide_react.*
-import org.example.kobwebreaxttailwind.components.react.ui.*
+import radix_ui.components.DropdownMenuProps
 import react.FC
 import react.dom.html.ReactHTML.span
+import shadcn.ui.components.*
 import web.cssom.ClassName
 
 val DropdownMenuDemo = FC<DropdownMenuProps> {
