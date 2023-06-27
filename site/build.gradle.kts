@@ -40,11 +40,6 @@ kotlin {
             }
         }
 
-        fun kotlinw(target: String): String =
-            "org.jetbrains.kotlin-wrappers:kotlin-$target"
-
-        val kotlinWrappersVersion = "1.0.0-pre.572"
-
         val jsMain by getting {
             dependencies {
                 implementation(compose.html.core)
@@ -53,10 +48,6 @@ kotlin {
                 implementation(libs.kobweb.silk.icons.fa)
                 implementation("org.jetbrains.kotlin-wrappers:kotlin-extensions:1.0.1-pre.256-kotlin-1.5.31")
 
-                implementation(enforcedPlatform(kotlinw("wrappers-bom:$kotlinWrappersVersion")))
-                implementation(kotlinw("react"))
-                implementation(kotlinw("react-dom"))
-                implementation(npm("@lshay/ui","0.0.6"))
                 implementation(devNpm("lucide-react","0.215.0"))
 
                 implementation(devNpm("@babel/core","7.22.5"))
@@ -64,7 +55,7 @@ kotlin {
                 implementation(devNpm("@babel/preset-react","7.22.5"))
                 implementation(devNpm("@babel/preset-env","7.22.5"))
                 implementation(devNpm("@babel/preset-typescript","7.22.5"))
-                implementation(kotlinw("typescript"))
+
 
                 implementation(devNpm("tailwindcss", "3.3.2"))
                 implementation(npm("tailwindcss-animate","1.0.5"))
@@ -73,6 +64,8 @@ kotlin {
                 implementation(npm("style-loader", "2.0.0"))
                 implementation(npm("css-loader", "5.2.7"))
                 implementation(devNpm("postcss-loader", "4.3.0"))
+
+                implementation(projects.shadcn)
             }
         }
 

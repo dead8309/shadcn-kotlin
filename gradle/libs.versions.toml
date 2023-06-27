@@ -15,3 +15,4 @@ jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "jetbrains-com
 kobweb-application = { id = "com.varabyte.kobweb.application", version.ref = "kobweb" }
 kobwebx-markdown = { id = "com.varabyte.kobwebx.markdown", version.ref = "kobweb" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kobweb-library = { id = "com.varabyte.kobweb.library", version.ref = "kobweb" }

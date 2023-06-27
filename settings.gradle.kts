@@ -1,3 +1,5 @@
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -9,3 +11,5 @@ pluginManagement {
 rootProject.name = "kobwebreaxttailwind"
 
 include(":site")
+include(":shadcn")
+include(":radix")
