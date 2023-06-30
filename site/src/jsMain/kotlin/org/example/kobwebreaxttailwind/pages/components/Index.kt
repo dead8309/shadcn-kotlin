@@ -6,6 +6,8 @@ import org.example.kobwebreaxttailwind.components.layouts.PageLayout
 import react.FC
 import react.Props
 import react.create
+import react.dom.html.ReactHTML.section
+import web.cssom.ClassName
 
 
 @Page
@@ -18,7 +20,10 @@ fun ComponentPage() {
 }
 
 val ComponentApp = FC<Props> {
+    section {
+        className = ClassName("container grid items-center gap-6 pb-8 pt-6 md:py-10")
         ComponentSink {
             components = demoComponents
         }
+    }
 }
