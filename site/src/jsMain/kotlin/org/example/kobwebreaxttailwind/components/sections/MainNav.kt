@@ -1,11 +1,31 @@
 package org.example.kobwebreaxttailwind.components.sections
 
-import lucide_react.Bird
+import lucide_react.LucideProps
 import react.FC
 import react.Props
 import react.dom.html.ReactHTML
+import react.dom.svg.ReactSVG.circle
+import react.dom.svg.ReactSVG.svg
+import react.dom.svg.StrokeLinecap
+import react.dom.svg.StrokeLinejoin
 import web.cssom.ClassName
 
+val logo = FC<LucideProps> {
+    svg {
+        className = it.className
+        viewBox = "0 0 24 24"
+        fill = "currentColor"
+        stroke = "currentColor"
+        strokeWidth = 2.0
+        strokeLinecap =  StrokeLinecap.round
+        strokeLinejoin = StrokeLinejoin.round
+        circle {
+            cx = 12.0
+            cy = 12.0
+            r = 10.0
+        }
+    }
+}
 
 val MainNav = FC<Props> {
     ReactHTML.div {
@@ -13,10 +33,10 @@ val MainNav = FC<Props> {
         ReactHTML.a {
             href = "/"
             className = ClassName("mr-6 flex items-center space-x-2")
-            Bird { className = ClassName("h-6 w-6") }
+            logo { className = ClassName("h-6 w-6") }
             ReactHTML.span {
                 className = ClassName("hidden font-bold sm:inline-block")
-                +"ShadKt"
+                +"shadcn-kotlin"
             }
         }
         ReactHTML.nav {

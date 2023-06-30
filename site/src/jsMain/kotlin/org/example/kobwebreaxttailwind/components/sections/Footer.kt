@@ -1,28 +1,50 @@
 package org.example.kobwebreaxttailwind.components.sections
 
-import androidx.compose.runtime.*
-import com.varabyte.kobweb.compose.css.AlignSelf
-import com.varabyte.kobweb.compose.foundation.layout.Row
-import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.style.*
-import com.varabyte.kobweb.silk.components.text.SpanText
-import com.varabyte.kobweb.silk.theme.SilkTheme
-import org.jetbrains.compose.web.css.*
+import react.FC
+import react.Props
+import react.dom.html.ReactHTML.a
+import react.dom.html.ReactHTML.div
+import react.dom.html.ReactHTML.footer
+import react.dom.html.ReactHTML.p
+import web.cssom.ClassName
+import web.window.WindowTarget
 
-val FooterStyle by ComponentStyle.base {
-    Modifier
-        .margin(top = 2.cssRem)
-        .borderTop(1.px, LineStyle.Solid, SilkTheme.palettes[colorMode].border)
-        .padding(topBottom = 1.cssRem, leftRight = 4.cssRem)
-        .alignSelf(AlignSelf.Center)
-}
-
-@Composable
-fun Footer(modifier: Modifier = Modifier) {
-    Row(FooterStyle.toModifier().then(modifier)) {
-        SpanText("Made with ")
-        Link("https://github.com/varabyte/kobweb", "Kobweb")
+val Footer = FC<Props> {
+    footer {
+        className = ClassName("border-t py-6 md:py-0")
+        div {
+            className = ClassName("container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row")
+            div {
+                className = ClassName("flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0")
+                logo { className = ClassName("hidden h-6 w-6 md:inline-block") }
+                p {
+                    className = ClassName("text-center text-sm leading-loose text-muted-foreground md:text-left")
+                    +"Built & designed by "
+                    a {
+                        href = "https://twitter.com/shadcn"
+                        target = WindowTarget._blank
+                        rel = "noreferrer"
+                        className = ClassName("font-medium underline underline-offset-4")
+                        +"shadcn"
+                    }
+                    +". Ported to kotlin by "
+                    a {
+                        href = "https://github.com/dead8309"
+                        target = WindowTarget._blank
+                        rel = "noreferrer"
+                        className = ClassName("font-medium underline underline-offset-4")
+                        +"@dead8309"
+                    }
+                    +". The source code is available on "
+                    a {
+                        href = "https://github.com/dead8309/kobweb-react-tailwind"
+                        target = WindowTarget._blank
+                        rel = "noreferrer"
+                        className = ClassName("font-medium underline underline-offset-4")
+                        +"GitHub"
+                    }
+                }
+            }
+        }
     }
 }

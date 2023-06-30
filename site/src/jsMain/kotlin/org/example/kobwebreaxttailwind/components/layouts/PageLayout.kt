@@ -2,6 +2,7 @@ package org.example.kobwebreaxttailwind.components.layouts
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import org.example.kobwebreaxttailwind.components.sections.Footer
 import org.example.kobwebreaxttailwind.components.sections.NavHeader
 import org.example.kobwebreaxttailwind.theme.ThemeProvider
 import react.FC
@@ -32,7 +33,7 @@ fun PageLayout(
                     className = ClassName("flex-1")
                     +children
                 }
-                // SiteFooter
+                Footer {}
             }
         }
         // Toaster
