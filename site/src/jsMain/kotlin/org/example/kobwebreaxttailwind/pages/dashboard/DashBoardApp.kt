@@ -1,6 +1,6 @@
 package org.example.kobwebreaxttailwind.pages.dashboard
 
-import org.example.kobwebreaxttailwind.components.react.lucide_react.*
+import lucide_react.*
 import react.FC
 import react.Props
 import react.VFC

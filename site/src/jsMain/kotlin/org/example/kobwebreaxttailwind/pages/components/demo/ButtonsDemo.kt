@@ -1,7 +1,7 @@
 package org.example.kobwebreaxttailwind.pages.components.demo
 
-import org.example.kobwebreaxttailwind.components.react.lucide_react.Loader2
-import org.example.kobwebreaxttailwind.components.react.lucide_react.Mail
+import lucide_react.Loader2
+import lucide_react.Mail
 import react.FC
 import react.Props
 import react.dom.html.ReactHTML.div

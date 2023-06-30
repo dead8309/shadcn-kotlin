@@ -1,6 +1,8 @@
 package org.example.kobwebreaxttailwind.pages.components
 
 import org.example.kobwebreaxttailwind.pages.components.demo.*
+import react.FC
+import react.Props
 import react.create
 import react.dom.html.ReactHTML.div
 import web.cssom.ClassName
@@ -66,170 +68,165 @@ val demoComponents: List<ComponentCardProps> = listOf(
         href = "progress",
         className = "mix-blend-multiply dark:mix-blend-screen",
         children = ProgressDemo.create(),
+    ),
+    ComponentCardProps(
+        title = "Slider",
+        description = "A slider component",
+        href = "slider",
+        className = "mix-blend-multiply dark:mix-blend-screen",
+        children = SliderDemo.create { className = ClassName("w-[80%]") },
+    ),
+    ComponentCardProps(
+    title= "Hover Card",
+    description= "An hover card component",
+    href= "hover-card",
+    children= HoverCardDemo.create(),
+    ),
+    ComponentCardProps(
+    title= "Menubar",
+    description= "A menubar component",
+    href= "menubar",
+    children= MenubarDemo.create(),
+    ),
+
+    ComponentCardProps(
+    title= "Date Picker",
+    description= "A date picker component",
+    href= "date-picker",
+    children= DatePickerDemo.create(),
+    ),
+    ComponentCardProps(
+    title= "Navigation Menu",
+    description= "A navigation menu component",
+    href= "navigation-menu",
+    className= "[&_ul>li:last-child]:hidden",
+    children= NavigationMenuDemo.create(),
+    ),
+    ComponentCardProps(
+    title= "Switch",
+    description= "A switch component",
+    href= "switch",
+    children= SwitchDemo.create(),
+    ),
+    ComponentCardProps(
+    title= "Select",
+    description= "A select component",
+    href= "select",
+    children= SelectDemo.create(),
+    ),
+    ComponentCardProps(
+    title= "Separator",
+    description= "A separator component",
+    href= "separator",
+    children= SeparatorDemo.create(),
+    ),
+    ComponentCardProps(
+    title= "Aspect Ratio",
+    description= "An aspect ratio component",
+    href= "aspect-ratio",
+    className= "w-[80%] mx-auto",
+    children= AspectRatioDemo.create(),
+    ),
+    ComponentCardProps(
+    title= "Popover",
+    description= "A popover component",
+    href= "popover",
+    children= div.create {
+        className = ClassName("scale-150")
+        PopoverDemo {}
+    }
+    ),
+    /*
+    ComponentCardProps(
+    title= "Toast",
+    description= "A toast component",
+    href= "toast",
+    children = ToastDemo.create(),
+    ),
+    */
+    ComponentCardProps(
+    title= "Tooltip",
+    description= "A tooltip component",
+    href= "tooltip",
+    children= div.create {
+        className = ClassName("scale-150")
+        TooltipDemo {}
+    }
+    ),
+    ComponentCardProps(
+    title= "Sheet",
+    description= "A sheet component",
+    href= "sheet",
+    children= SheetDemo.create(),
+    ),
+    ComponentCardProps(
+    title= "Command",
+    description= "A command component",
+    href= "command",
+    className= "w-[80%] mx-auto",
+    children= CommandDemo.create(),
+    ),
+    ComponentCardProps(
+    title= "Radio",
+    description= "A radio component",
+    href= "radio",
+    className= "[&>span]:h-[80px] [&>span]:w-[200px]",
+    children= RadioGroupDemo.create(),
+    ),
+    ComponentCardProps(
+    title= "Context Menu",
+    description= "A context menu component",
+    href= "context-menu",
+    className= "[&>span]:h-[80px] [&>span]:w-[200px]",
+    children= ContextMenuDemo.create(),
+    ),
+    ComponentCardProps(
+    title= "Dialog",
+    description= "A dialog component",
+    href= "dialog",
+    children= DialogDemo.create(),
+    ),
+    ComponentCardProps(
+    title= "Badge",
+    description= "A badge component",
+    href= "badge",
+    children= FC<Props> {
+        BadgeDemo {}
+        BadgeSecondary {}
+        BadgeDestructive {}
+        BadgeOutline {}
+    }.create()
+    ),
+    ComponentCardProps(
+    title= "Skeleton",
+    description= "A skeleton component",
+    href= "skeleton",
+    className= "w-[80%] mx-auto mix-blend-multiply dark:mix-blend-screen",
+    children = SkeletonDemo.create(),
+    ),
+    ComponentCardProps(
+    title= "Collapsible",
+    description= "A collapsible component",
+    href= "collapsible",
+    className= "[&>div]:w-[80%]",
+    children= CollapsibleDemo.create() ,
+    ),
+    ComponentCardProps(
+    title= "Toggle",
+    description= "A toggle component",
+    href= "toggle",
+    children= div.create {
+        className = ClassName("flex space-x-2")
+        ToggleDemo {}
+        ToggleOutline {}
+        ToggleDisabled {}
+        ToggleWithText {}
+    }
+    ),
+    ComponentCardProps(
+    title= "ScrollArea",
+    description= "A scroll area component",
+    href= "scrollarea",
+    children= ScrollAreaDemo.create()
     )
 )
-
-/*
-TODO : Provide Wrapper these components
-
-ComponentCardProps(
-title= "Slider",
-description= "A slider component",
-href= "slider",
-className= "mix-blend-multiply dark:mix-blend-screen",
-children= <SliderDemo className="w-[80%]" />,
-),
-
-ComponentCardProps(
-title= "Hover Card",
-description= "An hover card component",
-href= "hover-card",
-children= <HoverCardDemo />,
-),
-,
-ComponentCardProps(
-title= "Menubar",
-description= "A menubar component",
-href= "menubar",
-children= <MenubarDemo />,
-),
-
-
-ComponentCardProps(
-title= "Date Picker",
-description= "A date picker component",
-href= "date-picker",
-children= <DatePickerDemo />,
-),
-
-ComponentCardProps(
-title= "Navigation Menu",
-description= "A navigation menu component",
-href= "navigation-menu",
-className= "[&_ul>li:last-child]:hidden",
-children= <NavigationMenuDemo />,
-),
-ComponentCardProps(
-title= "Switch",
-description= "A switch component",
-href= "switch",
-children= <SwitchDemo />,
-),
-ComponentCardProps(
-title= "Select",
-description= "A select component",
-href= "select",
-children= <SelectDemo />,
-),
-ComponentCardProps(
-title= "Separator",
-description= "A separator component",
-href= "separator",
-children= <SeparatorDemo />,
-),
-ComponentCardProps(
-title= "Aspect Ratio",
-description= "An aspect ratio component",
-href= "aspect-ratio",
-className= "w-[80%] mx-auto",
-children= <AspectRatioDemo />,
-),
-ComponentCardProps(
-title= "Popover",
-description= "A popover component",
-href= "popover",
-children= (
-<div className="scale-150">
-<PopoverDemo />
-</div>
-),
-),
-ComponentCardProps(
-title= "Toast",
-description= "A toast component",
-href= "toast",
-children= <ToastDemo />,
-),
-ComponentCardProps(
-title= "Tooltip",
-description= "A tooltip component",
-href= "tooltip",
-children= (
-<div className="scale-150">
-<TooltipDemo />
-</div>
-),
-),
-ComponentCardProps(
-title= "Sheet",
-description= "A sheet component",
-href= "sheet",
-children= <SheetDemo />,
-),
-ComponentCardProps(
-title= "Command",
-description= "A command component",
-href= "command",
-className= "w-[80%] mx-auto",
-children= <CommandDemo isSinkDemo />,
-),
-ComponentCardProps(
-title= "Radio",
-description= "A radio component",
-href= "radio",
-className= "[&>span]:h-[80px] [&>span]:w-[200px]",
-children= <RadioGroupDemo />,
-),
-ComponentCardProps(
-title= "Context Menu",
-description= "A context menu component",
-href= "context-menu",
-className= "[&>span]:h-[80px] [&>span]:w-[200px]",
-children= <ContextMenuDemo />,
-),
-
-ComponentCardProps(
-title= "Dialog",
-description= "A dialog component",
-href= "dialog",
-children= <DialogDemo />,
-),
-ComponentCardProps(
-title= "Badge",
-description= "A badge component",
-href= "badge",
-children= (
-<>
-<BadgeDemo />
-<BadgeSecondary />
-<BadgeDestructive />
-<BadgeOutline />
-</>
-),
-),
-ComponentCardProps(
-title= "Skeleton",
-description= "A skeleton component",
-href= "skeleton",
-className= "w-[80%] mx-auto mix-blend-multiply dark:mix-blend-screen",
-children= <SkeletonDemo />,
-),
-ComponentCardProps(
-title= "Collapsible",
-description= "A collapsible component",
-href= "collapsible",
-className= "[&>div]:w-[80%]",
-children= <CollapsibleDemo />,
-),
-ComponentCardProps(
-title= "Toggle",
-description= "A toggle component",
-href= "toggle",
-children= (
-<div className="flex space-x-2">
-<ToggleDemo />
-<ToggleOutline />
-<ToggleDisabled />
-<ToggleWithText />
-</div>
-),*/

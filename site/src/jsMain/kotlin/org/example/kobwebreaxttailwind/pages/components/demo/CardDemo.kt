@@ -1,7 +1,7 @@
 package org.example.kobwebreaxttailwind.pages.components.demo
 
-import org.example.kobwebreaxttailwind.components.react.lucide_react.BellRing
-import org.example.kobwebreaxttailwind.components.react.lucide_react.Check
+import lucide_react.BellRing
+import lucide_react.Check
 import react.FC
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.p
