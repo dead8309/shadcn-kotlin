@@ -27,7 +27,7 @@ var closeDelay: Number?
 external interface HoverCardTriggerProps: 
 react.dom.html.AnchorHTMLAttributes<web.html.HTMLAnchorElement>,
 react.PropsWithClassName {
-
+    var asChild: Boolean
 }
 
 external interface HoverCardPortalProps: 

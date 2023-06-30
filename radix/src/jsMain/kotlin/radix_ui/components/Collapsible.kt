@@ -22,7 +22,7 @@ var onOpenChange: dynamic
 external interface CollapsibleTriggerProps: 
 react.dom.html.ButtonHTMLAttributes<web.html.HTMLButtonElement>,
 react.PropsWithClassName {
-
+    var asChild: Boolean?
 }
 
 external interface CollapsibleContentProps: 

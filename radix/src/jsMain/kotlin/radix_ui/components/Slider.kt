@@ -31,9 +31,9 @@ var step: Number?
 
 var minStepsBetweenThumbs: Number?
 
-var value: dynamic
+var value: Array<Number>
 
-var defaultValue: dynamic
+var defaultValue: Array<Number>
 
 var onValueChange: (value: Any) -> Unit
 

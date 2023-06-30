@@ -60,7 +60,7 @@ var disableHoverableContent: Boolean?
 external interface TooltipTriggerProps: 
 react.dom.html.ButtonHTMLAttributes<web.html.HTMLButtonElement>,
 react.PropsWithClassName {
-
+    var asChild: Boolean
 }
 
 external interface TooltipPortalProps: 

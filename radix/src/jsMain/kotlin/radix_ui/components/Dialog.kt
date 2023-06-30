@@ -29,7 +29,7 @@ var modal: Boolean?
 external interface DialogTriggerProps: 
 react.dom.html.ButtonHTMLAttributes<web.html.HTMLButtonElement>,
 react.PropsWithClassName {
-
+    var asChild: Boolean
 }
 
 external interface DialogPortalProps: 
@@ -115,7 +115,7 @@ react.PropsWithClassName {
 external interface DialogCloseProps: 
 react.dom.html.ButtonHTMLAttributes<web.html.HTMLButtonElement>,
 react.PropsWithClassName {
-
+    var asChild: Boolean
 }
 
 @JsName("Dialog")

@@ -110,6 +110,8 @@ react.PropsWithClassName {
 var active: Boolean?
 
 var onSelect: ((event: Event)->Unit)?
+
+var asChild: Boolean?
 }
 
 external interface NavigationMenuIndicatorProps: 
