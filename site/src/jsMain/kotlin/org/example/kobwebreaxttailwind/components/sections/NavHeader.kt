@@ -1,8 +1,6 @@
 package org.example.kobwebreaxttailwind.components.sections
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.setValue
 import com.varabyte.kobweb.compose.dom.ElementTarget
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Row
@@ -10,17 +8,12 @@ import com.varabyte.kobweb.compose.foundation.layout.Spacer
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.components.forms.Button
-import com.varabyte.kobweb.silk.components.icons.fa.FaMoon
-import com.varabyte.kobweb.silk.components.icons.fa.FaSun
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.navigation.UndecoratedLinkVariant
 import com.varabyte.kobweb.silk.components.overlay.PopupPlacement
 import com.varabyte.kobweb.silk.components.overlay.Tooltip
 import com.varabyte.kobweb.silk.components.style.*
 import com.varabyte.kobweb.silk.components.style.common.SmoothColorStyle
-import com.varabyte.kobweb.silk.theme.colors.ColorMode
-import com.varabyte.kobweb.silk.theme.colors.rememberColorMode
 import com.varabyte.kobweb.silk.theme.toSilkPalette
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
@@ -54,7 +47,6 @@ private fun NavLink(path: String, text: String) {
 
 @Composable
 fun NavHeader() {
-    var colorMode by rememberColorMode()
     Box(NavHeaderStyle.toModifier()) {
         Row(
             Modifier.fillMaxSize(),
@@ -65,17 +57,6 @@ fun NavHeader() {
             NavLink("/components", "Components")
             Spacer()
 
-            Button(
-                onClick = { colorMode = colorMode.opposite() },
-                NavItemStyle.toModifier(NavButtonVariant)
-            ) {
-                Box(Modifier.margin(8.px)) {
-                    when (colorMode) {
-                        ColorMode.LIGHT -> FaMoon()
-                        ColorMode.DARK -> FaSun()
-                    }
-                }
-            }
             Tooltip(ElementTarget.PreviousSibling, "Toggle color mode", placement = PopupPlacement.BottomRight)
         }
     }
