@@ -8,6 +8,8 @@ package shadcn.ui.components
 
 import radix_ui.components.*
 import react.FC
+import react.Props
+import react.dom.html.HTMLAttributes
 import web.html.HTMLDivElement
 
 
@@ -31,7 +33,8 @@ external val SheetOverlay: react.FC<DialogOverlayProps>
 */
 
 external interface SheetContentProps: DialogContentProps {
-    var side: String /* top | bottom | left | right */
+    var position: String? /* "top" | "right" | "bottom" | "left" */
+    var size: String? /* "content" | "default" | "sm" | "lg" | "xl" | "full" */
 }
 
 @JsName("SheetContent")

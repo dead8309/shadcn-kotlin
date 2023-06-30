@@ -14,3 +14,6 @@ import radix_ui.components.*
 
 @JsName("ScrollArea")
 external val ScrollArea: react.FC<ScrollAreaProps>
+
+@JsName("ScrollBar")
+external val ScrollBar: react.FC<ScrollAreaScrollbarProps>

@@ -1,6 +1,6 @@
 // Automatically generated - do not modify!
 
-@file:JsModule("@lshay/ui/components/sheet")
+@file:JsModule("@lshay/ui/components/skeleton")
 @file:JsNonModule
 
 package shadcn.ui.components

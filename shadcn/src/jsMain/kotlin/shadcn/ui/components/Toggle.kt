@@ -8,5 +8,8 @@ package shadcn.ui.components
 
 import radix_ui.components.*
 
+external interface ToggleProps: radix_ui.components.ToggleProps {
+    var variant: String?
+}
 @JsName("Toggle")
 external val Toggle: react.FC<ToggleProps>

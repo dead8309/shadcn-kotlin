@@ -11,6 +11,7 @@ package shadcn.ui.components
 
 
 import radix_ui.components.*
+import react.Props
 
 @JsName("MenubarGroup")
 external val MenubarGroup: react.FC<MenubarGroupProps>
@@ -27,6 +28,13 @@ external val MenubarRadioGroup: react.FC<MenubarRadioGroupProps>
 @JsName("Menubar")
 external val Menubar: react.FC<MenubarProps>
 
+@JsName("MenubarMenu")
+external val MenubarMenu: react.FC<MenubarMenuProps>
+
+@JsName("MenubarShortcut")
+external val MenubarShortcut: react.FC<Props>
+
+
 @JsName("MenubarTrigger")
 external val MenubarTrigger: react.FC<MenubarTriggerProps>
 
@@ -38,6 +46,10 @@ external val MenubarSubContent: react.FC<MenubarSubContentProps>
 
 @JsName("MenubarContent")
 external val MenubarContent: react.FC<MenubarContentProps>
+
+external interface MenubarItemProps: radix_ui.components.MenubarItemProps {
+    var inset: Boolean?
+}
 
 @JsName("MenubarItem")
 external val MenubarItem: react.FC<MenubarItemProps>

@@ -26,6 +26,11 @@ external val ContextMenuSub: react.FC<ContextMenuSubProps>
 @JsName("ContextMenuRadioGroup")
 external val ContextMenuRadioGroup: react.FC<ContextMenuRadioGroupProps>
 
+
+external interface ContextMenuSubTriggerProps: radix_ui.components.ContextMenuSubTriggerProps {
+    var inset: Boolean
+}
+
 @JsName("ContextMenuSubTrigger")
 external val ContextMenuSubTrigger: react.FC<ContextMenuSubTriggerProps>
 
@@ -35,8 +40,15 @@ external val ContextMenuSubContent: react.FC<ContextMenuSubContentProps>
 @JsName("ContextMenuContent")
 external val ContextMenuContent: react.FC<ContextMenuContentProps>
 
+external interface ContextMenuItemProps: radix_ui.components.ContextMenuItemProps {
+    var inset: Boolean
+}
+
 @JsName("ContextMenuItem")
 external val ContextMenuItem: react.FC<ContextMenuItemProps>
+
+@JsName("ContextMenuShortcut")
+external val ContextMenuShortcut: react.FC<ContextMenuItemProps>
 
 @JsName("ContextMenuCheckboxItem")
 external val ContextMenuCheckboxItem: react.FC<ContextMenuCheckboxItemProps>
@@ -44,6 +56,9 @@ external val ContextMenuCheckboxItem: react.FC<ContextMenuCheckboxItemProps>
 @JsName("ContextMenuRadioItem")
 external val ContextMenuRadioItem: react.FC<ContextMenuRadioItemProps>
 
+external interface ContextMenuLabelProps: radix_ui.components.ContextMenuLabelProps {
+    var inset: Boolean
+}
 @JsName("ContextMenuLabel")
 external val ContextMenuLabel: react.FC<ContextMenuLabelProps>
 

@@ -26,3 +26,9 @@ external val DialogTitle: react.FC<DialogTitleProps>
 
 @JsName("DialogDescription")
 external val DialogDescription: react.FC<DialogDescriptionProps>
+
+@JsName("DialogHeader")
+external val DialogHeader: react.FC<react.dom.html.HTMLAttributes<web.html.HTMLDivElement>>
+
+@JsName("DialogFooter")
+external val DialogFooter: react.FC<react.dom.html.HTMLAttributes<web.html.HTMLDivElement>>
