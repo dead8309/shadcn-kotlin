@@ -13,3 +13,4 @@ rootProject.name = "kobwebreaxttailwind"
 include(":site")
 include(":shadcn")
 include(":radix")
+include(":lucide-react")
