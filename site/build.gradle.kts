@@ -45,10 +45,7 @@ kotlin {
                 implementation(compose.html.core)
                 implementation(libs.kobweb.core)
                 implementation(libs.kobweb.silk.core)
-                implementation(libs.kobweb.silk.icons.fa)
                 implementation("org.jetbrains.kotlin-wrappers:kotlin-extensions:1.0.1-pre.256-kotlin-1.5.31")
-
-                implementation(devNpm("lucide-react","0.215.0"))
 
                 implementation(devNpm("@babel/core","7.22.5"))
                 implementation(devNpm("babel-loader","9.1.2"))
@@ -65,7 +62,9 @@ kotlin {
                 implementation(npm("css-loader", "5.2.7"))
                 implementation(devNpm("postcss-loader", "4.3.0"))
 
+                implementation(npm("next-themes","0.2.1"))
                 implementation(projects.shadcn)
+                implementation(projects.lucideReact)
             }
         }
 
