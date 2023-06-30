@@ -1,4 +1,4 @@
-package org.example.kobwebreaxttailwind.components.react.lucide_react
+package lucide_react
 
 import react.dom.svg.SVGAttributes
 import web.svg.SVGElement
