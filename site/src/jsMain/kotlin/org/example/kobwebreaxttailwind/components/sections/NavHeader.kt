@@ -21,7 +21,7 @@ val NavHeader = FC<Props>{
         div {
             className = ClassName("container flex h-14 items-center")
             MainNav {}
-            // MobileNav {}
+            MobileNav {}
             div {
                 className = ClassName("flex flex-1 items-center justify-between space-x-2 sm:space-x-4 md:justify-end")
                 div {
