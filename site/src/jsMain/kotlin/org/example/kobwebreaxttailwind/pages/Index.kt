@@ -23,7 +23,7 @@ import web.window.WindowTarget
 @Composable
 fun ReactPage() {
     PageLayout(
-       title = "React + Tailwind + Kobweb",
+       title = "shadcn-kotlin",
        children = ShadCnApp.create()
     )
 }
