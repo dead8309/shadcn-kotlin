@@ -15,7 +15,6 @@ import react.dom.html.ReactHTML.a
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.section
-import react.dom.html.ReactHTML.span
 import shadcn.ui.components.Separator
 import web.cssom.ClassName
 import web.window.WindowTarget
@@ -41,15 +40,8 @@ val ShadCnApp = FC<Props> {
                     className = ClassName("mx-2 h-4")
                     orientation = "vertical"
                 }
-                +" "
-                span {
-                    className = ClassName("sm:hidden")
-                    +"shad-kotlin"
-                }
-                span {
-                    className = ClassName("hidden sm:inline")
-                    +"Introducing shadcn-kotlin"
-                }
+                +" Introducing shadcn-kotlin"
+
                 ChevronRight { className = ClassName("ml-1 h-4 w-4") }
             }
             PageHeaderHeading {

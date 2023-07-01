@@ -7,6 +7,7 @@ import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.h3
 import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.section
+import react.useState
 import shadcn.ui.components.Input
 import web.cssom.ClassName
 import web.html.InputType
@@ -24,19 +25,24 @@ external interface ComponentsSinkProps: Props {
 }
 
 
-val ComponentSink = FC<ComponentsSinkProps> {
+val ComponentSink = FC<ComponentsSinkProps> { props ->
+    val (query, setQuery) = useState("")
+
+    val filteredComponents = props.components.filter {
+        it.title.lowercase().contains(query.lowercase()) || it.description.lowercase().contains(query.lowercase())
+    }
     div {
         className = ClassName("flex flex-col gap-5 py-10")
         Input {
             type= InputType.text
             placeholder = "Filter components..."
             className = ClassName("w-full px-4 py-2 text-lg border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary")
-            /*value={query}
-            onChange={(e) => setQuery(e.target.value)}*/
+            value= query
+            onChange={ e -> setQuery(e.target.value) }
         }
         div {
             className = ClassName("grid grid-cols-1 gap-4 md:grid-cols-2 2xl:grid-cols-3")
-            it.components.forEach {
+            filteredComponents.forEach {
                 div {
                     className=ClassName("flex flex-col transition-transform border rounded-lg bg-secondary text-secondary-foreground")
                     section {
