@@ -19,8 +19,8 @@ external val Sheet: react.FC<DialogProps>
 @JsName("SheetTrigger")
 external val SheetTrigger: react.FC<DialogTriggerProps>
 
-@JsName("SheetClose")
-external val SheetClose: react.FC<DialogCloseProps>
+// TODO: Update lshay lib manually. It doesn't provides some new components
+// external val SheetClose: react.FC<DialogCloseProps>
 
 /**
  * @property SheetContent already uses them internally so not exporting them

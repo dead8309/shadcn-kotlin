@@ -9,6 +9,7 @@
 
 package radix_ui.components
 
+import react.StateSetter
 import web.dom.Element
 import web.events.Event
 
@@ -21,7 +22,7 @@ var open: Boolean?
 
 var defaultOpen: Boolean?
 
-var onOpenChange: dynamic
+var onOpenChange: StateSetter<Boolean>
 
 var modal: Boolean?
 }
