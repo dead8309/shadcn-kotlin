@@ -2,6 +2,7 @@
 jetbrains-compose = "1.4.0"
 kobweb = "0.13.5"
 kotlin = "1.8.20"
+tailwind-kt = "0.0.2"
 
 [libraries]
 kobweb-api = { module = "com.varabyte.kobweb:kobweb-api", version.ref = "kobweb" }
@@ -16,3 +17,4 @@ kobweb-application = { id = "com.varabyte.kobweb.application", version.ref = "ko
 kobwebx-markdown = { id = "com.varabyte.kobwebx.markdown", version.ref = "kobweb" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kobweb-library = { id = "com.varabyte.kobweb.library", version.ref = "kobweb" }
+tailwind-kt = { id = "io.github.dead8309.tailwind-kt", version.ref = "tailwind-kt" }
