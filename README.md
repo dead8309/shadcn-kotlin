@@ -1,4 +1,4 @@
-# shadcn-kotlin-showcase
+# shadcn-kotlin
 
 This repository showcases the use of shadcn/ui in a Kotlin JS project
 using [Kobweb](https://kobweb.varabyte.com/)

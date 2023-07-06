@@ -1,5 +1,3 @@
-enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
-
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -8,9 +6,8 @@ pluginManagement {
     }
 }
 
-rootProject.name = "kobwebreaxttailwind"
+rootProject.name = "shadcn-kt"
 
 include(":site")
-include(":shadcn")
-include(":radix")
-include(":lucide-react")
+include(":library:shadcn-kotlin")
+include(":library:radix-kotlin")
