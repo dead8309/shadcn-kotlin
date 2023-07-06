@@ -1,4 +1,4 @@
-# radix-kotlin-js
+# radix-kotlin
 
 Kotlin wrapper for [Radix Ui](https://www.radix-ui.com/).
 

@@ -2,6 +2,7 @@
 import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
 import kizzy.tailwind.utils.setupTailwindProject
 import kotlinx.html.meta
+import org.jetbrains.kotlin.gradle.plugin.KotlinDependencyHandler
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -48,18 +49,22 @@ kotlin {
                 implementation(compose.html.core)
                 implementation(libs.kobweb.core)
                 implementation(libs.kobweb.silk.core)
-
-                implementation(devNpm("@babel/core","7.22.5"))
-                implementation(devNpm("babel-loader","9.1.2"))
-                implementation(devNpm("@babel/preset-react","7.22.5"))
-                implementation(devNpm("@babel/preset-env","7.22.5"))
-                implementation(devNpm("@babel/preset-typescript","7.22.5"))
-                implementation(npm("tailwindcss-animate","1.0.5"))
+                implementation("io.github.dead8309:lucide-kotlin:1.0.0")
+                babel()
                 implementation(npm("next-themes","0.2.1"))
+                implementation(project(":library:shadcn-kotlin"))
 
-                implementation(projects.shadcn)
-                implementation(projects.lucideReact)
             }
         }
     }
 }
+
+private val  KotlinDependencyHandler.babel: () -> Dependency?
+    get() = {
+            implementation(devNpm("@babel/core","7.22.5"))
+            implementation(devNpm("babel-loader","9.1.2"))
+            implementation(devNpm("@babel/preset-react","7.22.5"))
+            implementation(devNpm("@babel/preset-env","7.22.5"))
+            implementation(devNpm("@babel/preset-typescript","7.22.5"))
+    }
+

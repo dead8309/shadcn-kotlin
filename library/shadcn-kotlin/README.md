@@ -1,4 +1,4 @@
-# shadcn/ui-kotlin-js
+# shadcn-kotlin
 
 Kotlin wrapper for [shadcn/ui](https://ui.shadcn.com/).
 
