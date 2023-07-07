@@ -1,33 +1,24 @@
-# shadcn-kotlin
+<p align="center">
+ <img align="center" src="./metadata/kotlin1.svg" height="96" />
+ <h1 align="center">
+  shadcn-kotlin
+ </h1>
+</p>
 
-This repository showcases the use of shadcn/ui in a Kotlin JS project
+[shadcn-kotlin](https://shadcn-kotlin.vercel.app) is an unofficial port of [shadcn/ui](https://ui.shadcn.com/) made using
 using [Kobweb](https://kobweb.varabyte.com/)
 
-## Description
+> **Note** <br> **This project is not affiliated with shadcn, but inspired by him** <br> This project is created in need for ui library for the KotlinJs community.
 
-This project created to explore the integration of Kobweb with popular web technologies and libraries. It provides a
-platform for testing and experimenting with React Libraries and Tailwind CSS
+Accessible and customizable components' library. Free. Open Source.
 
-## Table of Contents
+![cover](./metadata/cover.png)
 
-- [Images](#images)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Integration with Tailwind CSS](#integration-with-tailwind-css)
-- [Acknowledgement](#acknowledgments)
+## Documentation
 
-## Images
-* located at `/components` page
-![components](metadata/components.png)
+Visit https://shadcn-kotlin.vercel.app/docs to view the documentation.
 
-* located at `/dashboard` page
-![dashboard](metadata/dashboard.png)
-
-
-
-
-## Installation
+## Run Locally
 
 To install and set up the project locally, follow these steps:
 
@@ -47,9 +38,7 @@ To install and set up the project locally, follow these steps:
    cd kobweb-react-tailwind/site
    ```
 
-## Usage
-
-To run the application, execute the following command:
+3. To run the application, execute the following command:
 
 ```bash
 kobweb run
@@ -58,25 +47,21 @@ kobweb run
 This will build the project and start a local development server. You can access it in your web browser
 at `http://localhost:8080`.
 
-## Features
-
-The Repository showcases the following features:
-
-- Integration of Kotlin JS with React components: Explore how Kotlin interacts with React by creating and using React
-  components in Kotlin code.
-- Tailwind CSS integration: Utilize the power of Tailwind CSS for styling your Kotlin JS components and UI.
-- TSX UI libraries in Kotlin: Experiment with popular TSX UI libraries (e.g., [shadcn/ui](https://ui.shadcn.com/))
-  within Kotlin JS projects.
 
 ## Integration with Tailwind CSS
 Using [tailwind-kt](https://github.con/dead8309/tailwind-kt) gradle plugin which does everything.
 
-You can read my manual configuration [here](./tailwind-integration.md) which I was using before.
+You can read the manual configuration [here](./tailwind-integration.md) which has been used before.
+
+
+## License
+
+Licensed under the [MIT license](./LICENSE).
+
 
 ## Acknowledgments
 
-Special thanks to excellent people, tools and
-resources that make this project possible:
+Special thanks to excellent people, tools and resources that make this project possible:
 
 * [Jetbrains](https://github.com/JetBrains) for [Kotlin JS Wrappers](https://github.com/JetBrains/kotlin-wrappers), 
 * [facebook](https://github.com/facebook) for [ReactJS](https://github.com/facebook/react)
