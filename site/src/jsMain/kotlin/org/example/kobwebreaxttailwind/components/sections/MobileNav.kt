@@ -83,7 +83,7 @@ val MobileLink = FC<MobileLinkProps> {
     a {
         href = it.href
         className = it.className
-        onClick = { e ->
+        onClick = { _ ->
             it.onOpenChange(false)
         }
         +it.children

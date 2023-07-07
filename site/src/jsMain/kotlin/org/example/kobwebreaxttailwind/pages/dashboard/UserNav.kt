@@ -1,13 +1,14 @@
 package org.example.kobwebreaxttailwind.pages.dashboard
 
 import lucide_react.*
-import react.VFC
+import react.FC
+import react.Props
 import react.dom.html.ReactHTML
 import shadcn.ui.components.*
 import web.cssom.ClassName
 
 
-val UserNav = VFC {
+val UserNav = FC<Props> {
     DropdownMenu {
         DropdownMenuTrigger {
             asChild = true
