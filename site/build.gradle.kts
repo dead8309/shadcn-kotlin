@@ -34,7 +34,7 @@ kobweb {
 }
 
 kotlin {
-    configAsKobwebApplication("kobwebreaxttailwind", includeServer = false)
+    configAsKobwebApplication("shadcn-kt", includeServer = false)
     setupTailwindProject()
     @Suppress("UNUSED_VARIABLE") // Suppress spurious warnings about sourceset variables not being used
     sourceSets {

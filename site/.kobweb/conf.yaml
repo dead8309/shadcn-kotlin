@@ -1,14 +1,14 @@
 site:
-  title: "Kobweb Reaxt Tailwind"
+  title: "Shadcn Kotlin"
 
 server:
   files:
     dev:
       contentRoot: "build/processedResources/js/main/public"
-      script: "build/developmentExecutable/kobwebreaxttailwind.js"
-      api: "build/libs/kobwebreaxttailwind.jar"
+      script: "build/developmentExecutable/shadcn-kt.js"
+      api: "build/libs/shadcn-kt.jar"
     prod:
-      script: "build/distributions/kobwebreaxttailwind.js"
+      script: "build/distributions/shadcn-kt.js"
       siteRoot: ".kobweb/site"
 
   port: 8080
