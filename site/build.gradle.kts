@@ -11,8 +11,8 @@ plugins {
     alias(libs.plugins.tailwind.kt)
 }
 
-group = "org.example.kobwebreaxttailwind"
-version = "1.0-SNAPSHOT"
+group = "example.shadcn_kotlin.ui"
+version = "1.0.0"
 
 
 kobweb {
