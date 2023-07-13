@@ -19,7 +19,7 @@ val Toc = FC<Props> {
             className = ClassName("font-medium")
             + "On This Page"
         }
-        TableOfContentsTree(getToc("md"))
+        TableOfContentsTree(getHeadingElements("md"))
     }
 }
 
@@ -48,14 +48,18 @@ data class TableOfContents(
     }
 }
 
-fun getToc(id: String): Array<TableOfContents> {
+/**
+ * @param id id of the container whose elements we should query
+ * @param shouldGenerateMissingIds tries to generate and set id of heading elements if it's not found
+ */
+fun getHeadingElements(id: String,shouldGenerateMissingIds: Boolean = true): Array<TableOfContents> {
     val div = document.getElementById(id)!!
     val headings = div.querySelectorAll("h2, h3")
     val hierarchy = emptyArray<TableOfContents>()
     var currentLevel: TableOfContents? = null
     headings.forEach { heading ->
         val level = heading.tagName[1].toString().toInt()
-        if (heading.id.isEmpty()) {
+        if (shouldGenerateMissingIds && heading.id.isEmpty()) {
             val newId = heading.innerHTML
                 .replace("/[^a-zA-Z0-9 ]/g".toRegex(), "")
                 .replace(" ", "-")
