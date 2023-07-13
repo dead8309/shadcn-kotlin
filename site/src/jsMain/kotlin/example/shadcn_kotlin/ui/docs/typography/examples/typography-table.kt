@@ -2,65 +2,70 @@ package example.shadcn_kotlin.ui.docs.typography.examples
 
 import react.FC
 import react.Props
-import react.dom.html.ReactHTML
-import react.dom.html.ReactHTML.p
+import react.dom.html.ReactHTML.div
+import react.dom.html.ReactHTML.table
+import react.dom.html.ReactHTML.tbody
+import react.dom.html.ReactHTML.td
+import react.dom.html.ReactHTML.th
+import react.dom.html.ReactHTML.thead
+import react.dom.html.ReactHTML.tr
 import web.cssom.ClassName
 
 val TypographyTable = FC<Props> {
-    ReactHTML.div {
+   div {
         className = ClassName("my-6 w-full overflow-y-auto")
-        ReactHTML.table {
+        table {
             className = ClassName("w-full")
-            ReactHTML.thead {
-                ReactHTML.tr {
+            thead {
+                tr {
                     className = ClassName("m-0 border-t p-0 even:bg-muted")
-                    ReactHTML.th {
+                    th {
                         className =
                             ClassName("border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right")
                         +"King's Treasury"
                     }
-                    ReactHTML.th {
+                    th {
                         className =
                             ClassName("border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right")
                         +"People's happiness"
                     }
                 }
             }
-            ReactHTML.tbody {
-                ReactHTML.tr {
+            tbody {
+                tr {
                     className = ClassName("m-0 border-t p-0 even:bg-muted")
-                    ReactHTML.td {
+                    td {
                         className =
                             ClassName("border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right")
                         +"Empty"
                     }
-                    ReactHTML.td {
+                    td {
                         className =
                             ClassName("border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right")
                         +"Overflowing"
                     }
                 }
-                ReactHTML.tr {
+                tr {
                     className = ClassName("m-0 border-t p-0 even:bg-muted")
-                    ReactHTML.td {
+                    td {
                         className =
                             ClassName("border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right")
                         +"Modest"
                     }
-                    ReactHTML.td {
+                    td {
                         className =
                             ClassName("border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right")
                         +"Satisfied"
                     }
                 }
-                ReactHTML.tr {
+                tr {
                     className = ClassName("m-0 border-t p-0 even:bg-muted")
-                    ReactHTML.td {
+                    td {
                         className =
                             ClassName("border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right")
                         +"Full"
                     }
-                    ReactHTML.td {
+                    td {
                         className =
                             ClassName("border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right")
                         +"Ecstatic"

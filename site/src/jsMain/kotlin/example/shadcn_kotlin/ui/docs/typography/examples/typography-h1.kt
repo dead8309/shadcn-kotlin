@@ -1,6 +1,5 @@
 package example.shadcn_kotlin.ui.docs.typography.examples
 
-import example.shadcn_kotlin.ui.docs.typography.Typography
 import react.FC
 import react.Props
 import react.dom.html.ReactHTML.h1

@@ -8,7 +8,7 @@ import web.cssom.ClassName
 val TypographyP = FC<Props> {
     p {
         className = ClassName("leading-7 [&:not(:first-child)]:mt-6")
-        "The king, seeing how much happier his subjects were, realized the error of"
+        +"The king, seeing how much happier his subjects were, realized the error of"
         +"his ways and repealed the joke tax."
     }
 }

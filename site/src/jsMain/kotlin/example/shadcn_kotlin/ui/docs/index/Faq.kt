@@ -4,16 +4,12 @@ import androidx.compose.runtime.Composable
 import example.shadcn_kotlin.ui.Constants
 import example.shadcn_kotlin.ui.components.hooks.useReactEffect
 import react.ChildrenBuilder
-import react.Props
-import react.ReactNode
-import react.dom.html.HTMLAttributes
 import react.dom.html.ReactHTML.a
-import react.dom.html.ReactHTML.br
-import react.dom.html.ReactHTML.em
 import react.dom.html.ReactHTML.p
-import shadcn.ui.components.*
-import web.cssom.ClassName
-import web.html.HTMLParagraphElement
+import shadcn.ui.components.Accordion
+import shadcn.ui.components.AccordionContent
+import shadcn.ui.components.AccordionItem
+import shadcn.ui.components.AccordionTrigger
 
 @Composable
 fun Faq() {
