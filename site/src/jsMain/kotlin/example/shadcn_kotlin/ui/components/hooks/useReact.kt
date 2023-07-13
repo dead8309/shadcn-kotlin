@@ -8,13 +8,14 @@ import react.FC
 import react.Props
 import react.create
 import react.dom.client.createRoot
+import web.crypto.crypto
 import web.dom.document
 
 @Composable
 fun useReactEffect(
     content: ChildrenBuilder.() -> Unit
 ) {
-    val id = ((1..500).random() .. (501..1000).random()).random()
+    val id = crypto.randomUUID()
     Div({ id("rc-$id")})
     val node = FC<Props> {
         content()
