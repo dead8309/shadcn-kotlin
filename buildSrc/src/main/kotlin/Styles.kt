@@ -14,16 +14,12 @@ object Styles {
     val tr = cn("m-0 border-t p-0 even:bg-muted")
     val th = cn("border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right")
     val td = cn("border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right")
+    val inline_code = cn("bg-muted py-[0.2rem] px-[0.3rem] rounded text-sm")
 }
 
 
 fun cn(className: String) = buildString {
     append("classes(")
-    className.split(" ")
-        .forEachIndexed { index, it ->
-            if (index == 0) {
-                append("\"$it\"")
-            } else append(",\"$it\"")
-        }
+    append(className.split(" ").joinToString(",") { "\"" + it + "\"" })
     append(")")
 }

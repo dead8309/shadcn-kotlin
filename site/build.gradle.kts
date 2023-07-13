@@ -73,6 +73,10 @@ kobweb {
                     code.info.takeIf { it.isNotBlank() }?.let { "\"$it\"" }
                 })"
             }
+            inlineCode.set { code ->
+                childrenOverride = listOf(Text(code.literal))
+                "$JB_DOM.Code({ ${Styles.inline_code} })"
+            }
             val baseRawTagHandler = rawTag.get()
             rawTag.set { tag ->
                 println("Raw tag handler got: $tag")
