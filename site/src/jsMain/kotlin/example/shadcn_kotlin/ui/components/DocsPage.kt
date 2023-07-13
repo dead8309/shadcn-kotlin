@@ -64,15 +64,14 @@ fun DocsPage(
                 DocsPager(title)
             }
             // TODO: TOC
-            if (mdCtx.frontMatter.containsKey("toc")) {
+            div {
+                className = ClassName("hidden text-sm xl:block")
                 div {
-                    className = ClassName("hidden text-sm xl:block")
-                    div {
-                        className = ClassName("sticky top-16 -mt-10 h-[calc(100vh-3.5rem)] overflow-hidden pt-6")
-                        ScrollArea {
-                            className = ClassName("pb-10")
-                            // Toc
-                        }
+                    className = ClassName("sticky top-16 -mt-10 h-[calc(100vh-3.5rem)] overflow-hidden pt-6")
+                    ScrollArea {
+                        className = ClassName("pb-10")
+                        // Render Toc after page has loaded
+                        div { id = "toc" }
                     }
                 }
             }

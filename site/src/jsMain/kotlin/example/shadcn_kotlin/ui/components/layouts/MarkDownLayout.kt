@@ -5,11 +5,13 @@ import androidx.compose.runtime.LaunchedEffect
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobwebx.markdown.markdown
 import example.shadcn_kotlin.ui.components.DocsPage
+import example.shadcn_kotlin.ui.components.Toc
 import example.shadcn_kotlin.ui.components.sections.Footer
 import example.shadcn_kotlin.ui.components.sections.NavHeader
 import example.shadcn_kotlin.ui.components.sidebarnav.DocsSidebarNav
 import example.shadcn_kotlin.ui.components.sidebarnav.sideNavbarItems
 import example.shadcn_kotlin.ui.theme.ThemeProvider
+import kotlinx.coroutines.delay
 import react.FC
 import react.Props
 import react.PropsWithChildren
@@ -27,7 +29,6 @@ fun MDLayout(
 ) {
     val ctx = rememberPageContext()
     val mdCtx = ctx.markdown!!
-    // we get the url as /docs/. and we are removing / from the last so we can find elements easily
 
     kotlinext.js.require("./globals.css")
     val layout = FC<Props> {
@@ -56,6 +57,10 @@ fun MDLayout(
     LaunchedEffect(Unit) {
         val root = document.getElementById("app")
         createRoot(root!!).render(layout.create())
+        delay(1)
+        // Render Toc after a delay to make sure that dom is loaded
+        val toc = document.getElementById("toc")
+        createRoot(toc!!).render(Toc.create())
     }
 }
 
