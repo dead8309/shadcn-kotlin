@@ -32,7 +32,7 @@ div {
 }
 ```
 
-### List of variables
+## CSS Variables
 
 Here's the list of variables available for customization:
 
@@ -108,7 +108,7 @@ Here's the list of variables available for customization:
 
 </Steps>
 
-### Adding new colors
+## Adding new colors
 
 To add new colors, you need to add them to your CSS file and to your `tailwind.config.js` file.
 
@@ -148,7 +148,7 @@ div {
 }
 ```
 
-### Other color formats
+## Other color formats
 
 I recommend using [HSL colors](https://www.smashingmagazine.com/2021/07/hsl-colors-css/) for theming but you can also use other color formats if you prefer.
 
