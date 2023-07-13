@@ -226,6 +226,67 @@ object Constants {
                 // rest contents goes here
             } 
         """.trimIndent()
+        val themeProvider = """
+            @file:JsModule("next-themes")
+            @file:JsNonModule
+            @file:Suppress("UnusedProperty")
+
+            package example.shadcn_kotlin.ui.theme
+
+            import react.Props
+
+            external interface UseThemeProps {
+                operator fun component1(): (theme: String) -> Unit
+
+                var themes: Array<String>
+                var forcedTheme: String?
+                var setTheme: (theme: String) -> Unit
+                var theme: String?
+                var resolvedTheme: String?
+                var systemTheme: String? /* 'dark' | 'light' */
+            }
+            external interface ThemeProviderProps: Props {
+                var themes: Array<String>
+                var forcedTheme: String?
+                var enableSystem: Boolean?
+                var disableTransitionOnChange: Boolean?
+                var enableColorScheme: Boolean?
+                var storageKey: String
+                var defaultTheme: String?
+                var attribute: String?
+                var value: Any?
+                var nonce: String?
+                var children: react.ReactNode?
+            }
+
+            @JsName("useTheme")
+            external val useTheme: () -> UseThemeProps
+
+            @JsName("ThemeProvider")
+            external val ThemeProvider: react.FC<ThemeProviderProps>
+        """.trimIndent()
+
+        val themeProviderWrappedLayout = """
+            @Composable
+            fun ReactPageLayout(
+                children: ReactNode
+            ) {
+                kotlinext.js.require("./globals.css")
+                val Layout = FC<Props> {
+                    ThemeProvider {
+                        defaultTheme = "system"
+                        enableSystem = true
+                        div {
+                            +children
+                        }
+                    }
+                }
+                LaunchedEffect(Unit) {
+                    val root = document.getElementById("root")
+                    createRoot(root!!).render(Layout.create())
+                }
+            }
+        """.trimIndent()
     }
     object MDStyles {
         val p = ClassName("leading-7 [&:not(:first-child)]:mt-6")
@@ -249,5 +310,6 @@ object Constants {
         val h4 = ClassName("font-heading mt-8 scroll-m-20 text-lg font-semibold tracking-tight")
         val h5 = ClassName("mt-8 scroll-m-20 text-lg font-semibold tracking-tight")
         val h6 = ClassName("mt-8 scroll-m-20 text-base font-semibold tracking-tight")
+        val inline_code = ClassName("bg-muted py-[0.2rem] px-[0.3rem] rounded text-sm")
     }
 }

@@ -4,4 +4,6 @@ description: Adding dark mode to your site.
 root: .components.layouts.MDLayout
 ---
 
-## TODO
+## Kobweb 
+
+<CP c=".docs.dark_mode.DarkModeSteps()" file=".components.ThemeToggle" />
