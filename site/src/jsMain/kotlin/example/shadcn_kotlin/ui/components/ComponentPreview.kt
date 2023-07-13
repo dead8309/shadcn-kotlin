@@ -1,27 +1,15 @@
 package example.shadcn_kotlin.ui.components
 
 import androidx.compose.runtime.Composable
-import example.shadcn_kotlin.ui.components.hooks.useCompose
 import example.shadcn_kotlin.ui.components.hooks.useReactEffect
-import react.*
-import react.dom.html.HTMLAttributes
+import react.ReactNode
 import react.dom.html.ReactHTML.div
 import shadcn.ui.components.Tabs
 import shadcn.ui.components.TabsContent
 import shadcn.ui.components.TabsList
 import shadcn.ui.components.TabsTrigger
-import web.crypto.Crypto
-import web.crypto.CryptoKey
-import web.crypto.crypto
 import web.cssom.ClassName
-import web.html.HTMLDivElement
 
-external interface ComponentPreviewProps: HTMLAttributes<HTMLDivElement> {
-    var name: String
-    var extractClassname: Boolean?
-    var extractedClassNames: String?
-    var align: String? /* "center" | "start" | "end" */
-}
 @Composable
 fun ComponentPreview(
     style: String = "",

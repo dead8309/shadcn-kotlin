@@ -3,9 +3,9 @@ package example.shadcn_kotlin.ui.components
 import androidx.compose.runtime.Composable
 import example.shadcn_kotlin.ui.components.hooks.useReactEffect
 import react.ChildrenBuilder
-import react.ReactNode
 import react.dom.html.ReactHTML.div
 import web.cssom.ClassName
+
 @Composable
 fun Steps(child: ChildrenBuilder.() -> Unit) {
     useReactEffect {
