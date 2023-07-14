@@ -1,24 +1,20 @@
 package example.shadcn_kotlin.ui.components
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import example.shadcn_kotlin.ui.components.hooks.useReactEffect
 import lucide_react.CheckIcon
 import lucide_react.CopyIcon
-import org.jetbrains.compose.web.dom.Div
-import react.*
-import react.dom.client.createRoot
+import react.FC
+import react.Props
 import react.dom.html.HTMLAttributes
 import react.dom.html.ReactHTML.code
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.pre
 import react.dom.html.ReactHTML.span
+import react.useEffect
+import react.useState
 import shadcn.ui.components.Button
-import shadcn.ui.components.ScrollArea
 import web.cssom.ClassName
-import web.dom.document
-import web.events.Event
-import web.events.EventType
 import web.html.HTMLButtonElement
 import web.navigator.navigator
 import web.timers.setTimeout
@@ -29,11 +25,15 @@ fun CodeBlock(text: String, lang: String? = null) {
     useReactEffect {
         CodeBlock {
             value = text
+            this.lang = lang.takeIf { lang != null }
         }
     }
 }
-
-val CodeBlock = FC<PropsWithValue<String>> { props ->
+external interface CodeBlockProps: Props {
+    var value: String
+    var lang: String?
+}
+val CodeBlock = FC<CodeBlockProps> { props ->
     div {
         className = ClassName("relative")
         pre {
