@@ -28,7 +28,7 @@ external interface ComponentsSinkProps: Props {
 val ComponentSink = FC<ComponentsSinkProps> { props ->
     val (query, setQuery) = useState("")
 
-    val filteredComponents = props.components.filter {
+    val filteredComponents = props.components.sortedBy { it.title }.filter {
         it.title.lowercase().contains(query.lowercase()) || it.description.lowercase().contains(query.lowercase())
     }
     div {
