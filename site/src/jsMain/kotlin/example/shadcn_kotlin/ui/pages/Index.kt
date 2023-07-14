@@ -74,12 +74,12 @@ val ShadCnApp = FC<Props> {
             div {
                 className = ClassName("flex w-full items-center space-x-4 pb-8 pt-4 md:pb-10")
                 a {
-                    href = "/"
+                    href = "/docs"
                     className = buttonVariants()
                     +"Get Started"
                 }
                 a {
-                    href = "https://github.com/dead8309/kobweb-react-tailwind"
+                    href = "https://github.com/dead8309/shadcn-kotlin"
                     className = buttonVariants(ButtonVariants.outline)
                     rel = "noreferrer"
                     target = WindowTarget._blank
