@@ -1,14 +1,13 @@
 package example.shadcn_kotlin.ui.components.sections
 
+import example.shadcn_kotlin.ui.components.sidebarnav.sideNavbarItems
 import lucide_react.SidebarOpen
-import react.FC
-import react.Props
-import react.StateSetter
+import react.*
 import react.dom.html.AnchorHTMLAttributes
 import react.dom.html.ReactHTML.a
 import react.dom.html.ReactHTML.div
+import react.dom.html.ReactHTML.h4
 import react.dom.html.ReactHTML.span
-import react.useState
 import shadcn.ui.components.*
 import web.cssom.ClassName
 import web.html.HTMLAnchorElement
@@ -67,6 +66,34 @@ val MobileNav = FC<Props> {
                         onOpenChange = setOpen
                         href = "https://github.com/dead8309"
                         +"Github"
+                    }
+                }
+                div {
+                    className = ClassName("flex flex-col space-y-2")
+                    sideNavbarItems.forEachIndexed { index, item ->
+                        div {
+                            key = index.toString()
+                            className = ClassName("flex flex-col space-y-3 pt-6")
+                            h4 {
+                                className = ClassName("font-medium")
+                                + item.title
+                            }
+                            item.items.forEach {
+                                Fragment {
+                                    key = it.href
+                                    if (it.href != null && it.disabled == null) {
+                                        MobileLink {
+                                            href = it.href
+                                            onOpenChange = setOpen
+                                            className = ClassName("text-muted-foreground")
+                                            + it.title
+                                        }
+                                    } else {
+                                        + it.title
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
