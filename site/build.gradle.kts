@@ -4,12 +4,15 @@ import com.varabyte.kobwebx.gradle.markdown.MarkdownHandlers.Companion.HeadingId
 import com.varabyte.kobwebx.gradle.markdown.NodeScope
 import com.varabyte.kobwebx.gradle.markdown.children
 import kizzy.tailwind.utils.setupTailwindProject
+import kotlinx.html.link
 import kotlinx.html.meta
+import kotlinx.html.script
 import org.commonmark.node.Code
 import org.commonmark.node.Heading
 import org.commonmark.node.HtmlBlock
 import org.commonmark.node.Text
 import org.jetbrains.kotlin.gradle.plugin.KotlinDependencyHandler
+import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpack
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -38,6 +41,10 @@ kobweb {
                 meta(name = "twitter:description", content = "Showcasing Kotlin wrapper for shadcn/ui")
                 meta(name = "twitter:card", content = "summary_large_image")
                 meta(name = "twitter:image:src", content = "/og.png")
+                link(href = "/prismjs/prism.css", rel="stylesheet")
+                script {
+                    src = "/prismjs/prism.js"
+                }
             }
         }
     }
@@ -69,9 +76,27 @@ kobweb {
             th.set { "$JB_DOM.Th({ ${Styles.th} })" }
             td.set { "$JB_DOM.Td({ ${Styles.td} })" }
             code.set { code ->
-                "example.shadcn_kotlin.ui.components.CodeBlock(\"\"\"${code.literal.escapeTripleQuotedText()}\"\"\", lang = ${
-                    code.info.takeIf { it.isNotBlank() }?.let { "\"$it\"" }
-                })"
+                val highlight = code.info
+                    .takeIf { "{" in it }
+                    ?.substringAfter("{","")
+                    ?.substringBefore("}","") ?: ""
+
+                val title = code.info
+                    .takeIf { "title=" in it }
+                    ?.substringAfter("=\"","")
+                    ?.substringBefore("\"","")
+
+                println(highlight)
+                buildString {
+                    append("example.shadcn_kotlin.ui.components.CodeBlock(")
+                    append("\"\"\"${code.literal.escapeTripleQuotedText()}\"\"\",")
+                    append(" lang= ${code.info.takeIf { it.isNotBlank() }?.let { "\"${it.substringBefore(" ")}\"" }},")
+                    append(" highlight= \"$highlight\"")
+                    if (title != null) {
+                        append(", title= \"$title\"")
+                    }
+                    append(")")
+                }
             }
             inlineCode.set { code ->
                 childrenOverride = listOf(Text(code.literal))
@@ -85,7 +110,6 @@ kobweb {
             val baseHtmlTagHandler = html.get()
             html.set { tag ->
                 println("Html tag handler got: ${tag.literal}")
-                println(SRC)
                 if (tag.literal.startsWith("<CP"))
                     handleComponentPreview(tag)
                 else
@@ -121,6 +145,10 @@ kotlin {
             }
         }
     }
+}
+
+tasks.withType<KotlinWebpack>().forEach { t ->
+    t.inputs.files(fileTree("src/jsMain/resources"))
 }
 
 private val  KotlinDependencyHandler.babel: () -> Dependency?
@@ -167,33 +195,10 @@ fun NodeScope.setupHeadingTags(idGenerator: Property<(String) -> String>, headin
     }
 }
 
-fun getHeadingClassNameFromLevel(level: Int) = when (level) {
-    1 -> cn("font-heading mt-2 scroll-m-20 text-4xl font-bold")
-    2 -> cn("font-heading mt-12 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0")
-    3 -> cn("font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight")
-    4 -> cn("font-heading mt-8 scroll-m-20 text-lg font-semibold tracking-tight")
-    5 -> cn("mt-8 scroll-m-20 text-lg font-semibold tracking-tight")
-    6 -> cn("mt-8 scroll-m-20 text-base font-semibold tracking-tight")
-    else  -> ""
-}
-
-fun cn(className: String) = buildString {
-        append("classes(")
-        className.split(" ")
-            .forEachIndexed { index, it ->
-                if (index == 0) {
-                    append("\"$it\"")
-                } else append(",\"$it\"")
-            }
-        append(")")
-    }
-
-val SRC = "src.jsMain.kotlin.$group"
-
 fun handleComponentPreview(tag: HtmlBlock): String {
    val composable = group.toString() + tag.literal.substringAfter("c=\"").substringBefore("()\"")
-    val codePath = (SRC + tag.literal.substringAfter("file=\"").substringBefore("\"")).replace(".","/")
-    var content = projectDir.resolve("$codePath.kt").readText()
+    val file = tag.literal.substringAfter("file=\"").substringBefore("\"")
+    var content = getFileContents(file)
     val importIndex = content.indexOf("import")
     if (importIndex == -1) {
         return ""
@@ -203,4 +208,22 @@ fun handleComponentPreview(tag: HtmlBlock): String {
         append(composable)
         append("(\"\"\"$content\"\"\")")
     }
+}
+
+fun getAllFiles(dir: File): List<File> {
+    val files = mutableListOf<File>()
+    dir.listFiles()?.forEach {
+        if (it.isFile)
+            files.add(it)
+        else
+            files.addAll(getAllFiles(it))
+    }
+    return files.toList()
+}
+
+fun getFileContents(file: String): String {
+    val files = getAllFiles(projectDir.resolve("src/jsMain/kotlin/example/shadcn_kotlin/ui"))
+    return files
+        .find { file == it.nameWithoutExtension }
+        ?.readText() ?: ""
 }

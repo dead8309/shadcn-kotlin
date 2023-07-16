@@ -23,3 +23,14 @@ fun cn(className: String) = buildString {
     append(className.split(" ").joinToString(",") { "\"" + it + "\"" })
     append(")")
 }
+
+
+fun getHeadingClassNameFromLevel(level: Int) = when (level) {
+    1 -> cn("font-heading mt-2 scroll-m-20 text-4xl font-bold")
+    2 -> cn("font-heading mt-12 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0")
+    3 -> cn("font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight")
+    4 -> cn("font-heading mt-8 scroll-m-20 text-lg font-semibold tracking-tight")
+    5 -> cn("mt-8 scroll-m-20 text-lg font-semibold tracking-tight")
+    6 -> cn("mt-8 scroll-m-20 text-base font-semibold tracking-tight")
+    else  -> ""
+}
