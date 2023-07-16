@@ -20,6 +20,7 @@ fun NewProjectSteps() {
         }
         p("Use the Kobweb CLI to create a new project.")
         CodeBlock {
+            lang = "bash"
             value = "kobweb create app"
         }
         // <!----------------------------------------------------------------------->
@@ -34,10 +35,12 @@ fun NewProjectSteps() {
             }
         }
         CodeBlock {
+            lang = "kts"
             value = Constants.TailwindKt.implementation
         }
         p("Run the site through kobeweb cli once so tailwind-kt can generate all the necessary files")
         CodeBlock {
+            lang = "bash"
             value = "kobweb run"
         }
         // <!----------------------------------------------------------------------->
@@ -52,6 +55,7 @@ fun NewProjectSteps() {
             + " library which adds all the components to your project."
         }
         CodeBlock {
+            lang = "kts"
             value = Constants.ShadcnKotlin.implementation
         }
         // <!----------------------------------------------------------------------->
@@ -60,6 +64,7 @@ fun NewProjectSteps() {
             + "Add ${Constants.Babel.name} dependencies"
         }
         CodeBlock {
+            lang = "kts"
             value = Constants.Babel.implementation
         }
         p("This will fix the webpack loader issues")
@@ -76,6 +81,7 @@ fun NewProjectSteps() {
             }
         }
         CodeBlock {
+            lang = "js"
             value = Constants.Configs.tailwindConfigJs
         }
 
@@ -92,6 +98,7 @@ fun NewProjectSteps() {
             }
         }
         CodeBlock {
+            lang = "css"
             value = Constants.Configs.css
         }
 
@@ -107,6 +114,7 @@ fun NewProjectSteps() {
             }
         }
         CodeBlock {
+            lang = "kt"
             value = Constants.Configs.pageLayout
         }
 
@@ -125,6 +133,7 @@ fun NewProjectSteps() {
         }
         p("Add the following contents to the file")
         CodeBlock {
+            lang = "js"
             value = Constants.Configs.babelLoader
         }
         // <!----------------------------------------------------------------------->

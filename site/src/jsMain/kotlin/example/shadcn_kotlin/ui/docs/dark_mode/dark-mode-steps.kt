@@ -31,6 +31,7 @@ fun DarkModeSteps(code: String) {
             + " npm library in your build.gradle"
         }
         CodeBlock {
+            lang = "kts"
             value = "implementation(npm(\"next-themes\",\"0.2.1\"))"
         }
         h3 {
@@ -47,6 +48,7 @@ fun DarkModeSteps(code: String) {
             }
         }
         CodeBlock {
+            lang = "kt"
             value = Constants.Configs.themeProvider
         }
         h3 {
@@ -63,6 +65,7 @@ fun DarkModeSteps(code: String) {
             }
         }
         CodeBlock {
+            lang = "kt"
             value = Constants.Configs.themeProviderWrappedLayout
         }
         h3 {
@@ -78,6 +81,7 @@ fun DarkModeSteps(code: String) {
 
             }
             this.code = code
+            this.lang = "kt"
         }
     }
 }

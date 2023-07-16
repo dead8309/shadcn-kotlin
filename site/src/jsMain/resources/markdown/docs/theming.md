@@ -38,71 +38,59 @@ Here's the list of variables available for customization:
 
 <Steps>
 
-```css 
-// title="Default background color of <body />...etc"
+```css title="Default background color of <body />...etc"
 --background: 0 0% 100%;
 --foreground: 222.2 47.4% 11.2%;
 ```
 
-```css 
-// title="Muted backgrounds such as <TabsList />, <Skeleton /> and <Switch />"
+```css title="Muted backgrounds such as <TabsList />, <Skeleton /> and <Switch />"
 --muted: 210 40% 96.1%;
 --muted-foreground: 215.4 16.3% 46.9%;
 ```
 
-```css 
-// title="Background color for <Card />"
+```css title="Background color for <Card />"
 --card: 0 0% 100%;
 --card-foreground: 222.2 47.4% 11.2%;
 ```
 
-```css 
-// title="Background color for popovers such as <DropdownMenu />, <HoverCard />, <Popover />"
+```css title="Background color for popovers such as <DropdownMenu />, <HoverCard />, <Popover />"
 --popover: 0 0% 100%;
 --popover-foreground: 222.2 47.4% 11.2%;
 ```
 
-```css
-// title="Default border color"
+```css title="Default border color"
 --border: 214.3 31.8% 91.4%;
 ```
 
-```css 
-// title="Border color for inputs such as <Input />, <Select />, <Textarea />"
+```css title="Border color for inputs such as <Input />, <Select />, <Textarea />"
 --input: 214.3 31.8% 91.4%;
 ```
 
-```css 
-// title="Primary colors for <Button />"
+```css title="Primary colors for <Button />"
 --primary: 222.2 47.4% 11.2%;
 --primary-foreground: 210 40% 98%;
 ```
 
-```css 
-// title="Secondary colors for <Button />"
+```css title="Secondary colors for <Button />"
 --secondary: 210 40% 96.1%;
 --secondary-foreground: 222.2 47.4% 11.2%;
 ```
 
-```css 
-// title="Used for accents such as hover effects on <DropdownMenuItem>, <SelectItem>...etc"
+```css title="Used for accents such as hover effects on <DropdownMenuItem>, <SelectItem>...etc"
 --accent: 210 40% 96.1%;
 --accent-foreground: 222.2 47.4% 11.2%;
 ```
 
-```css 
-// title="Used for destructive actions such as <Button variant="destructive">"
+```css title="Used for destructive actions such as <Button variant="destructive">"
 --destructive: 0 100% 50%;
 --destructive-foreground: 210 40% 98%;
 ```
 
-```css 
-// title="Used for focus ring"
+```css title="Used for focus ring"
 --ring: 215 20.2% 65.1%;
 ```
 
-```css 
-// title="Border radius for card, input and buttons"
+```css title="Border radius for card, input and buttons"
 --radius: 0.5rem;
 ```
 
@@ -112,8 +100,7 @@ Here's the list of variables available for customization:
 
 To add new colors, you need to add them to your CSS file and to your `tailwind.config.js` file.
 
-```css 
-// title="app/globals.css"
+```css title="app/globals.css"
 :root {
   --warning: 38 92% 50%;
   --warning-foreground: 48 96% 89%;
@@ -125,8 +112,7 @@ To add new colors, you need to add them to your CSS file and to your `tailwind.c
 }
 ```
 
-```js {5-6}
- // title="tailwind.config.js"
+```js {5-6} title="tailwind.config.js"
 module.exports = {
   theme: {
     extend: {
@@ -141,8 +127,7 @@ module.exports = {
 
 You can now use the `warning` utility class in your components.
 
-```kotlin 
-// /bg-warning/ /text-warning-foreground/
+```kotlin
 div {
     className = ClassName("bg-warning text-warning-foreground")
 }

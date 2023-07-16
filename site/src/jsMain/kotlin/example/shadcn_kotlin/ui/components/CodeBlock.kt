@@ -21,33 +21,44 @@ import web.timers.setTimeout
 import kotlin.time.Duration.Companion.seconds
 
 @Composable
-fun CodeBlock(text: String, lang: String? = null) {
+fun CodeBlock(
+    code: String,
+    lang: String,
+    highlight: String,
+    title: String? = ""
+) {
     useReactEffect {
         CodeBlock {
-            value = text
-            this.lang = lang.takeIf { lang != null }
+            value = code
+            this.lang = lang
+            this.highlight = highlight
+            this.title = title
         }
     }
 }
 external interface CodeBlockProps: Props {
     var value: String
     var lang: String?
+    var highlight: String
+    var title: String?
 }
+
 val CodeBlock = FC<CodeBlockProps> { props ->
+    if (props.title != null) {
+        div {
+            className = ClassName("text-sm leading-5 font-medium mt-2 pt-6 px-4")
+            +props.title
+        }
+    }
     div {
         className = ClassName("relative")
         pre {
+            // TODO: Add line highlight attr("data-line", highlight)
             className =
                 ClassName("mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border py-4 data-[theme=dark]:bg-background data-[theme=light]:bg-white")
             code {
-                this.lang = lang
-                className = ClassName("flex flex-col relative rounded font-mono text-sm")
-                props.value.split("\n").map {
-                    span {
-                        className = ClassName("px-4 py-0.5")
-                        + it
-                    }
-                }
+                className = ClassName("relative rounded font-mono text-sm language-${props.lang}")
+                + props.value
             }
             CopyButton {
                 value = props.value

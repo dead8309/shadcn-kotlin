@@ -63,7 +63,6 @@ fun DocsPage(
                 }
                 DocsPager(title)
             }
-            // TODO: TOC
             div {
                 className = ClassName("hidden text-sm xl:block")
                 div {

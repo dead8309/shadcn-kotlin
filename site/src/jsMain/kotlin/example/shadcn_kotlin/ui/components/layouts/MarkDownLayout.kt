@@ -13,6 +13,7 @@ import example.shadcn_kotlin.ui.components.sidebarnav.DocsSidebarNav
 import example.shadcn_kotlin.ui.components.sidebarnav.sideNavbarItems
 import example.shadcn_kotlin.ui.theme.ThemeProvider
 import kotlinx.browser.window
+import kotlinx.coroutines.delay
 import react.FC
 import react.Props
 import react.PropsWithChildren
@@ -23,6 +24,7 @@ import react.dom.html.ReactHTML.div
 import shadcn.ui.components.ScrollArea
 import web.cssom.ClassName
 import web.dom.document
+import kotlin.time.Duration.Companion.seconds
 
 @Composable
 fun MDLayout(
@@ -62,6 +64,8 @@ fun MDLayout(
             val toc = document.getElementById("toc")
             createRoot(toc!!).render(Toc.create())
         }
+        delay(1.seconds)
+        js("Prism.highlightAll()")
     }
 
 }

@@ -15,12 +15,14 @@ import web.cssom.ClassName
 @Composable
 fun ComponentPreview(
     component: ReactNode,
-    code: String = ""
+    code: String = "",
+    lang: String = ""
 ) {
     useReactEffect {
         ComponentPreview {
             this.component = component
             this.code = code
+            this.lang = lang
         }
     }
 }
@@ -28,7 +30,9 @@ fun ComponentPreview(
 external interface ComponentPreviewProps: Props {
     var code: String
     var component: ReactNode
-
+    // Syntax Highlighting doesn't work in Components Preview as the code tab is not visible
+    // when `Prism.highlightAll()` is called
+    var lang: String
 }
 
 val ComponentPreview = FC<ComponentPreviewProps> {
@@ -73,6 +77,7 @@ val ComponentPreview = FC<ComponentPreviewProps> {
                         className = ClassName("w-full rounded-md [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto")
                         CodeBlock {
                             value = it.code
+                            lang = it.lang
                         }
                     }
                 }
