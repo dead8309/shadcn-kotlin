@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <excludedPredefinedLibrary name="shadcn-kt/build/js/node_modules" />
+    <excludedPredefinedLibrary name="shadcn-kt/build/js/packages/shadcn-kt-radix-kotlin-test/node_modules" />
+    <excludedPredefinedLibrary name="shadcn-kt/build/js/packages/shadcn-kt-shadcn-kotlin-test/node_modules" />
+    <excludedPredefinedLibrary name="shadcn-kt/build/js/packages/shadcn-kt-test/node_modules" />
+    <excludedPredefinedLibrary name="shadcn-kt/build/js/packages/shadcn-kt/node_modules" />
+    <excludedPredefinedLibrary name="shadcn-kt/build/js/packages_imported/kotlin-test-js-runner/0.0.1/node_modules" />
+  </component>
+</project>

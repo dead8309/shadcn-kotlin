@@ -139,6 +139,7 @@ kotlin {
                 implementation("io.github.dead8309:lucide-kotlin:1.0.0")
                 babel()
                 implementation(npm("next-themes","0.2.1"))
+                implementation(devNpm("cssnano","6.0.1"))
                 implementation(project(":library:shadcn-kotlin"))
                 implementation(libs.kobwebx.markdown)
 
