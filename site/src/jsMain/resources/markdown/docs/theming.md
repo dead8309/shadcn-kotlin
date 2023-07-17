@@ -36,8 +36,6 @@ div {
 
 Here's the list of variables available for customization:
 
-<Steps>
-
 ```css title="Default background color of <body />...etc"
 --background: 0 0% 100%;
 --foreground: 222.2 47.4% 11.2%;
@@ -93,8 +91,6 @@ Here's the list of variables available for customization:
 ```css title="Border radius for card, input and buttons"
 --radius: 0.5rem;
 ```
-
-</Steps>
 
 ## Adding new colors
 

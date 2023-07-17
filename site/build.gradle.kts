@@ -26,7 +26,6 @@ group = "example.shadcn_kotlin.ui"
 version = "1.0.0"
 
 val JB_DOM = "org.jetbrains.compose.web.dom"
-val SHAD = "shadcn.ui.components"
 
 kobweb {
     app {
@@ -49,6 +48,8 @@ kobweb {
         }
     }
     markdown {
+        imports.add(".components.*")
+
         handlers {
             heading.set {
                 this.setupHeadingTags(idGenerator,it)
@@ -71,7 +72,7 @@ kobweb {
                 """$JB_DOM.Img("${img.destination}", "$altText", { ${Styles.img} })"""
             }
             hr.set { "$JB_DOM.Hr({ ${Styles.hr} })" }
-            table.set { "example.shadcn_kotlin.ui.components.mdTable" }
+            table.set { "mdTable" }
             tr.set { "$JB_DOM.Tr({ ${Styles.tr} })" }
             th.set { "$JB_DOM.Th({ ${Styles.th} })" }
             td.set { "$JB_DOM.Td({ ${Styles.td} })" }
@@ -88,7 +89,7 @@ kobweb {
 
                 println(highlight)
                 buildString {
-                    append("example.shadcn_kotlin.ui.components.CodeBlock(")
+                    append("CodeBlock(")
                     append("\"\"\"${code.literal.escapeTripleQuotedText()}\"\"\",")
                     append(" lang= ${code.info.takeIf { it.isNotBlank() }?.let { "\"${it.substringBefore(" ")}\"" }},")
                     append(" highlight= \"$highlight\"")
@@ -199,7 +200,7 @@ fun NodeScope.setupHeadingTags(idGenerator: Property<(String) -> String>, headin
 }
 
 fun handleComponentPreview(tag: HtmlBlock): String {
-    val composable = "$group.components.ComponentPreview"
+    val composable = "ComponentPreview"
     val (component, content) = getComponentAndFileContent(tag)
     return buildString {
         append(composable)

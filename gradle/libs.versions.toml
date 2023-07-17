@@ -1,6 +1,6 @@
 [versions]
 jetbrains-compose = "1.4.0"
-kobweb = "0.13.8"
+kobweb = "0.13.9-SNAPSHOT"
 kotlin = "1.8.20"
 tailwind-kt = "0.0.2"
 kotlin-wrappers = "18.2.0-pre.584"

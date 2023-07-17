@@ -2,13 +2,15 @@
 title: Introduction
 description: Re-usable components built using Radix UI and Tailwind CSS.
 root: .components.layouts.MDLayout
+imports:
+  - .docs.index.*
 ---
 
 An unofficial, [Kotlin](https://kotlinlang.org/) port of [shadcn/ui](https://ui.shadcn.com). This is not affiliated with [shadcn](https://twitter.com/shadcn) but inspired by him. This is a project born out of the need for a similar project for the KotlinJs ecosystem.
 
 <br>
 
-{{{ .docs.index.Callout() }}}
+{{{ Callout() }}}
 
 This is a component library. It's a collection of re-usable components that you can add to your apps.
 
@@ -20,7 +22,7 @@ _Use this as a reference to build your own component libraries._
 
 ## FAQ
 
-{{{ .docs.index.Faq() }}}
+{{{ Faq() }}}
 
 ## Credits
 
