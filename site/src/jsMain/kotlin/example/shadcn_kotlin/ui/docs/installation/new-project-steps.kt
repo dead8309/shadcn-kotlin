@@ -84,13 +84,13 @@ fun NewProjectSteps() {
             lang = "js"
             value = Constants.Configs.tailwindConfigJs
         }
+        p("Feel free to add or modify as needed to suit your project.")
 
         // <!----------------------------------------------------------------------->
         h3 {
             className = Constants.MDStyles.h3
             + "Configure Styles"
         }
-        p("Feel free to add or modify as needed to suit your project.")
         p("Add the following to your "){
             it.apply {
                 strong { + "src/jsMain/resources/globals.css"}
