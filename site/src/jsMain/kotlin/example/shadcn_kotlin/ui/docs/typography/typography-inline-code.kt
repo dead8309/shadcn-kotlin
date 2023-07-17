@@ -1,4 +1,4 @@
-package example.shadcn_kotlin.ui.docs.typography.examples
+package example.shadcn_kotlin.ui.docs.typography
 
 import react.FC
 import react.Props
