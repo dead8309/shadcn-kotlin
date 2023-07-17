@@ -2,6 +2,7 @@ package example.shadcn_kotlin.ui.components
 
 import androidx.compose.runtime.Composable
 import example.shadcn_kotlin.ui.components.hooks.useReactEffect
+import react.ChildrenBuilder
 import react.FC
 import react.Props
 import react.ReactNode
@@ -14,15 +15,16 @@ import web.cssom.ClassName
 
 @Composable
 fun ComponentPreview(
-    component: ReactNode,
-    code: String = "",
-    lang: String = ""
+    code: String,
+    component: ChildrenBuilder.() -> Unit
 ) {
     useReactEffect {
         ComponentPreview {
-            this.component = component
+            this.previewChild = {
+                component(it)
+            }
             this.code = code
-            this.lang = lang
+            this.lang = "kt" // Because we only use component preview for components made in kotlin
         }
     }
 }
@@ -33,7 +35,9 @@ external interface ComponentPreviewProps: Props {
     // Syntax Highlighting doesn't work in Components Preview as the code tab is not visible
     // when `Prism.highlightAll()` is called
     var lang: String
+    var previewChild: (ChildrenBuilder) -> Unit
 }
+
 
 val ComponentPreview = FC<ComponentPreviewProps> {
     div {
@@ -67,6 +71,9 @@ val ComponentPreview = FC<ComponentPreviewProps> {
                 div {
                     className = ClassName("preview flex min-h-[350px] w-full justify-center p-10 items-center")
                     + it.component
+                    if (it.previewChild != undefined) {
+                        it.previewChild(this)
+                    }
                 }
             }
             TabsContent {
