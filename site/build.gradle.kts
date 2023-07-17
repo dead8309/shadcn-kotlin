@@ -110,7 +110,9 @@ kobweb {
             val baseHtmlTagHandler = html.get()
             html.set { tag ->
                 println("Html tag handler got: ${tag.literal}")
-                if (tag.literal.startsWith("<CP"))
+                if (tag.literal.startsWith("<CodeComponent")) {
+                    handleCodeComponent(tag)
+                } else if (tag.literal.startsWith("<ComponentPreview"))
                     handleComponentPreview(tag)
                 else
                     baseHtmlTagHandler.invoke(this, tag)
@@ -197,19 +199,46 @@ fun NodeScope.setupHeadingTags(idGenerator: Property<(String) -> String>, headin
 }
 
 fun handleComponentPreview(tag: HtmlBlock): String {
-   val composable = group.toString() + tag.literal.substringAfter("c=\"").substringBefore("()\"")
-    val file = tag.literal.substringAfter("file=\"").substringBefore("\"")
-    var content = getFileContents(file)
-    val importIndex = content.indexOf("import")
-    if (importIndex == -1) {
-        return ""
-    }
-    content = content.substring(importIndex)
+    val composable = "$group.components.ComponentPreview"
+    val (component, content) = getComponentAndFileContent(tag)
     return buildString {
         append(composable)
         append("(\"\"\"$content\"\"\")")
+        append("{ \n $component \n }")
     }
 }
+
+fun handleCodeComponent(tag: HtmlBlock): String {
+    val (component, content) = getComponentAndFileContent(tag)
+    return buildString {
+        append(component)
+        append("(\"\"\"$content\"\"\")")
+    }
+}
+
+fun getComponentAndFileContent(tag: HtmlBlock) : ComponentAndFileResult {
+    var component = tag.literal
+        .substringAfter("component=\"")
+        .substringBefore("\"")
+    if (component.startsWith(".")) {
+        component = group.toString() + component
+    }
+    val file = tag.literal
+        .substringAfter("file=\"")
+        .substringBefore("\"")
+    var content = getFileContents(file)
+    content = content.substring(content.indexOf("import"))
+
+    return ComponentAndFileResult(
+        component = component,
+        fileContent = content
+    )
+}
+
+data class ComponentAndFileResult(
+    val component: String,
+    val fileContent: String,
+)
 
 fun getAllFiles(dir: File): List<File> {
     val files = mutableListOf<File>()

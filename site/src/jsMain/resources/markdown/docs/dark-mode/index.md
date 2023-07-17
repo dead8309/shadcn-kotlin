@@ -6,4 +6,4 @@ root: .components.layouts.MDLayout
 
 ## Kobweb 
 
-<CP c=".docs.dark_mode.DarkModeSteps()" file="ThemeToggle" />
+<CodeComponent component=".docs.dark_mode.DarkModeSteps" file="ThemeToggle" />
