@@ -9,8 +9,8 @@ import example.shadcn_kotlin.ui.components.DocsPage
 import example.shadcn_kotlin.ui.components.Toc
 import example.shadcn_kotlin.ui.components.sections.Footer
 import example.shadcn_kotlin.ui.components.sections.NavHeader
-import example.shadcn_kotlin.ui.components.sidebarnav.DocsSidebarNav
-import example.shadcn_kotlin.ui.components.sidebarnav.sideNavbarItems
+import example.shadcn_kotlin.ui.components.sections.DocsSidebarNav
+import example.shadcn_kotlin.ui.config.docsConfig
 import example.shadcn_kotlin.ui.theme.ThemeProvider
 import kotlinx.browser.window
 import kotlinx.coroutines.delay
@@ -80,7 +80,7 @@ val DocsLayout = FC<PropsWithChildren> {
                 ScrollArea {
                     className = ClassName("h-full py-6 pl-8 pr-6 lg:py-8")
                     DocsSidebarNav {
-                        items = sideNavbarItems
+                        items = docsConfig.sidebarNav
                     }
                 }
             }

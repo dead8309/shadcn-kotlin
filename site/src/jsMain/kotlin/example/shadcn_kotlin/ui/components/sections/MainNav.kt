@@ -1,6 +1,9 @@
 package example.shadcn_kotlin.ui.components.sections
 
+import example.shadcn_kotlin.ui.config.SiteConfig
+import kotlinx.browser.window
 import lucide_react.LucideProps
+import react.ChildrenBuilder
 import react.FC
 import react.Props
 import react.dom.html.ReactHTML
@@ -32,31 +35,36 @@ val MainNav = FC<Props> {
             logo { className = ClassName("h-6 w-6") }
             ReactHTML.span {
                 className = ClassName("hidden font-bold sm:inline-block")
-                +"shadcn-kotlin"
+                + SiteConfig.name
             }
         }
         nav {
             className = ClassName("flex items-center space-x-6 text-sm font-medium")
+            MainNavLink(href="/docs",title = "Documentation")
+            MainNavLink(href="/docs/components",title = "Components")
+            MainNavLink(href="/dashboard",title = "Examples")
             ReactHTML.a {
-                href = "/dashboard"
-                className = ClassName("transition-colors hover:text-foreground/80 text-foreground/60")
-                +"Dashboard"
-            }
-            ReactHTML.a {
-                href = "/components"
-                className = ClassName("transition-colors hover:text-foreground/80 text-foreground/60")
-                +"Components"
-            }
-            ReactHTML.a {
-                href = "https://github.com/dead8309/kobweb-react-tailwind#integration-with-tailwind-css"
-                className = ClassName("transition-colors hover:text-foreground/80 text-foreground/60")
-                +"Tailwind"
-            }
-            ReactHTML.a {
-                href = "https://github.com/dead8309"
+                href = SiteConfig.Links.github
                 className = ClassName("hidden text-foreground/60 transition-colors hover:text-foreground/80 lg:block")
-                +"Github"
+                +"GitHub"
             }
         }
+    }
+}
+
+private fun ChildrenBuilder.MainNavLink(href: String, title: String) {
+    val path = window.location.pathname
+    val className= buildString {
+        append("transition-colors hover:text-foreground/80 ")
+        if (path.startsWith(href)) {
+            append("text-foreground")
+        } else {
+            append("text-foreground/60")
+        }
+    }
+    a {
+        this.href = href
+        this.className = ClassName(className)
+        + title
     }
 }

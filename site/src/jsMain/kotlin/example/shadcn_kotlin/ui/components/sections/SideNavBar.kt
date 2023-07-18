@@ -1,5 +1,7 @@
-package example.shadcn_kotlin.ui.components.sidebarnav
+package example.shadcn_kotlin.ui.components.sections
 
+import example.shadcn_kotlin.ui.types.NavItemWithChildren
+import example.shadcn_kotlin.ui.types.SidebarNavItem
 import kotlinx.browser.window
 import react.FC
 import react.Props

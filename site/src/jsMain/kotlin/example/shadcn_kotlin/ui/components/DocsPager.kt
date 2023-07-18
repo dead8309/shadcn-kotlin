@@ -1,7 +1,6 @@
 package example.shadcn_kotlin.ui.components
 
-import example.shadcn_kotlin.ui.components.sidebarnav.sideNavbarItems
-import kotlinx.browser.window
+import example.shadcn_kotlin.ui.config.docsConfig
 import lucide_react.ChevronLeftIcon
 import lucide_react.ChevronRightIcon
 import react.ChildrenBuilder
@@ -14,7 +13,7 @@ data class NavItemData(val title: String, val href: String?)
 
 // Not an ideal Pager But hey!, it works!!
 fun ChildrenBuilder.DocsPager(title: String) {
-    val navItemsData: List<NavItemData> = sideNavbarItems.flatMap { sidebarNavItem ->
+    val navItemsData: List<NavItemData> = docsConfig.sidebarNav.flatMap { sidebarNavItem ->
         sidebarNavItem.items.flatMap { navItemWithChildren ->
             listOf(NavItemData(navItemWithChildren.title, navItemWithChildren.href)) +
                     navItemWithChildren.items.map { childItem ->

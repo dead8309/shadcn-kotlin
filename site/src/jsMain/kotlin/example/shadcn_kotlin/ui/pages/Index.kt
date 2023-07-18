@@ -6,6 +6,7 @@ import lucide_react.ChevronRight
 import example.shadcn_kotlin.ui.components.*
 import example.shadcn_kotlin.ui.components.layouts.PageLayout
 import example.shadcn_kotlin.ui.components.sections.github
+import example.shadcn_kotlin.ui.config.SiteConfig
 import example.shadcn_kotlin.ui.pages.dashboard.DashBoardApp
 import react.FC
 import react.Props
@@ -33,7 +34,7 @@ val ShadCnApp = FC<Props> {
         className = ClassName("container relative pb-10")
         PageHeader {
             a {
-                href = "https://github.com/dead8309/kobweb-react-tailwind"
+                href = SiteConfig.Links.github
                 className = ClassName("inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium")
                 +"🎉"
                 Separator {
@@ -63,7 +64,7 @@ val ShadCnApp = FC<Props> {
                 }
                 +" to KotlinJS, and is not affiliated with "
                 a {
-                    href="https://twitter.com/shadcn"
+                    href= SiteConfig.Links.twitter
                     target = WindowTarget._blank
                     rel="noreferrer"
                     className = ClassName("font-medium underline underline-offset-4")
@@ -79,7 +80,7 @@ val ShadCnApp = FC<Props> {
                     +"Get Started"
                 }
                 a {
-                    href = "https://github.com/dead8309/shadcn-kotlin"
+                    href = SiteConfig.Links.github
                     className = buttonVariants(ButtonVariants.outline)
                     rel = "noreferrer"
                     target = WindowTarget._blank

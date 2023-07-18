@@ -1,6 +1,6 @@
 package example.shadcn_kotlin.ui.components.sections
 
-import example.shadcn_kotlin.ui.components.sidebarnav.sideNavbarItems
+import example.shadcn_kotlin.ui.config.docsConfig
 import lucide_react.SidebarOpen
 import react.*
 import react.dom.html.AnchorHTMLAttributes
@@ -47,30 +47,18 @@ val MobileNav = FC<Props> {
                 className = ClassName("my-4 h-[calc(100vh-8rem)] pb-10 pl-6 overflow-auto")
                 div {
                     className = ClassName("flex flex-col space-y-3")
-                    MobileLink {
-                        onOpenChange = setOpen
-                        href = "/dashboard"
-                        +"Dashboard"
-                    }
-                    MobileLink {
-                        onOpenChange = setOpen
-                        href = "/components"
-                        +"Components"
-                    }
-                    MobileLink {
-                        onOpenChange = setOpen
-                        href = "https://github.com/dead8309/kobweb-react-tailwind#integration-with-tailwind-css"
-                        +"Tailwind"
-                    }
-                    MobileLink {
-                        onOpenChange = setOpen
-                        href = "https://github.com/dead8309"
-                        +"Github"
+                    docsConfig.mainNav.forEach {
+                        MobileLink {
+                            key= it.href
+                            href= it.href
+                            onOpenChange= setOpen
+                            + it.title
+                        }
                     }
                 }
                 div {
                     className = ClassName("flex flex-col space-y-2")
-                    sideNavbarItems.forEachIndexed { index, item ->
+                    docsConfig.sidebarNav.forEachIndexed { index, item ->
                         div {
                             key = index.toString()
                             className = ClassName("flex flex-col space-y-3 pt-6")

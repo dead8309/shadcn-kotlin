@@ -1,5 +1,6 @@
 package example.shadcn_kotlin.ui.components.sections
 
+import example.shadcn_kotlin.ui.config.SiteConfig
 import react.FC
 import react.Props
 import react.dom.html.ReactHTML.a
@@ -21,7 +22,7 @@ val Footer = FC<Props> {
                     className = ClassName("text-center text-sm leading-loose text-muted-foreground md:text-left")
                     +"Built & designed by "
                     a {
-                        href = "https://twitter.com/shadcn"
+                        href = SiteConfig.Links.twitter
                         target = WindowTarget._blank
                         rel = "noreferrer"
                         className = ClassName("font-medium underline underline-offset-4")
@@ -37,7 +38,7 @@ val Footer = FC<Props> {
                     }
                     +". The source code is available on "
                     a {
-                        href = "https://github.com/dead8309/kobweb-react-tailwind"
+                        href = SiteConfig.Links.github
                         target = WindowTarget._blank
                         rel = "noreferrer"
                         className = ClassName("font-medium underline underline-offset-4")

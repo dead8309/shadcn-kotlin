@@ -1,4 +1,7 @@
-package example.shadcn_kotlin.ui.components.sidebarnav
+package example.shadcn_kotlin.ui.config
+
+import example.shadcn_kotlin.ui.types.NavItemWithChildren
+import example.shadcn_kotlin.ui.types.SidebarNavItem
 
 
 val sideNavbarItems: List<SidebarNavItem> = listOf(

@@ -1,4 +1,4 @@
-package example.shadcn_kotlin.ui.components.sidebarnav
+package example.shadcn_kotlin.ui.types
 
 
 abstract class NavItem {
@@ -31,3 +31,8 @@ data class SidebarNavItem(
     override val icon: String? = null
     override val label: String? = null
 }
+
+data class MainNavItem(
+   val title: String,
+   val href: String?
+)

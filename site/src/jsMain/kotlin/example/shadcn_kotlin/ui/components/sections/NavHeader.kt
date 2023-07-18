@@ -1,6 +1,7 @@
 package example.shadcn_kotlin.ui.components.sections
 
 import example.shadcn_kotlin.ui.components.ThemeToggle
+import example.shadcn_kotlin.ui.config.SiteConfig
 import lucide_react.LucideProps
 import lucide_react.Twitter
 import react.FC
@@ -31,7 +32,7 @@ val NavHeader = FC<Props>{
                 nav {
                     className = ClassName("flex items-center space-x-1")
                     a {
-                        href = "https://github.com/dead8309"
+                        href = SiteConfig.Links.github
                         target = WindowTarget._blank
                         rel = "noreferrer"
                         div {
@@ -44,7 +45,7 @@ val NavHeader = FC<Props>{
                         }
                     }
                     a {
-                        href = "/"
+                        href = SiteConfig.Links.twitter
                         target = WindowTarget._blank
                         rel = "noreferrer"
                         div {
