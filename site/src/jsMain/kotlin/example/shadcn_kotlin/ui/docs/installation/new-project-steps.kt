@@ -1,7 +1,7 @@
 package example.shadcn_kotlin.ui.docs.installation
 
 import androidx.compose.runtime.Composable
-import example.shadcn_kotlin.ui.Constants
+import example.shadcn_kotlin.ui.docs.Constants
 import example.shadcn_kotlin.ui.components.CodeBlock
 import example.shadcn_kotlin.ui.components.Steps
 import example.shadcn_kotlin.ui.docs.index.a
@@ -30,7 +30,7 @@ fun NewProjectSteps() {
         }
         p("Apply "){
             it.apply {
-                a(Constants.TailwindKt.name,Constants.TailwindKt.repo)
+                a(Constants.TailwindKt.name, Constants.TailwindKt.repo)
                 + " plugin to add Tailwind CSS support to your project."
             }
         }
@@ -51,7 +51,7 @@ fun NewProjectSteps() {
         p {
             className = Constants.MDStyles.p
             + "Add "
-            a(Constants.ShadcnKotlin.name,Constants.ShadcnKotlin.repo)
+            a(Constants.ShadcnKotlin.name, Constants.ShadcnKotlin.repo)
             + " library which adds all the components to your project."
         }
         CodeBlock {

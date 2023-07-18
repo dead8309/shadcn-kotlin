@@ -1,7 +1,7 @@
 package example.shadcn_kotlin.ui.docs.index
 
 import androidx.compose.runtime.Composable
-import example.shadcn_kotlin.ui.Constants
+import example.shadcn_kotlin.ui.docs.Constants
 import example.shadcn_kotlin.ui.components.hooks.useReactEffect
 import react.ChildrenBuilder
 import react.dom.html.ReactHTML.a

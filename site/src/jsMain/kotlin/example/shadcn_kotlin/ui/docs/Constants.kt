@@ -1,4 +1,4 @@
-package example.shadcn_kotlin.ui
+package example.shadcn_kotlin.ui.docs
 
 import web.cssom.ClassName
 

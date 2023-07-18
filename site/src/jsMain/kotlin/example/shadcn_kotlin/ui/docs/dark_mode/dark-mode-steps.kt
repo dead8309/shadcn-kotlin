@@ -1,7 +1,7 @@
 package example.shadcn_kotlin.ui.docs.dark_mode
 
 import androidx.compose.runtime.Composable
-import example.shadcn_kotlin.ui.Constants
+import example.shadcn_kotlin.ui.docs.Constants
 import example.shadcn_kotlin.ui.components.CodeBlock
 import example.shadcn_kotlin.ui.components.ComponentPreview
 import example.shadcn_kotlin.ui.components.Steps
