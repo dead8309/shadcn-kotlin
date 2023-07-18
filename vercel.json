@@ -1,3 +1,9 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/docs/components",
+      "destination": "/docs/components/accordion"
+    }
+  ]
 }
