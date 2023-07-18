@@ -13,7 +13,7 @@ val ScrollAreaDemo = FC<Props> {
     val tags = (1..50)
         .toList()
         .map {
-            "v1.2.0-beta.${50 - it}"
+            "v1.2.0-beta." + (50 - it)
         }
 
     ScrollArea {

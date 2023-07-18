@@ -20,9 +20,7 @@ val DatePickerDemo = FC<Props> {
                 variant = "outline"
                 className =
                     ClassName(
-                    "w-[280px] justify-start text-left font-normal${
-                        if (date == null) " text-muted-foreground" else ""
-                    }")
+                    "w-[280px] justify-start text-left font-normal" + if (date == null) " text-muted-foreground" else "")
                 CalendarIcon {
                     className = ClassName("mr-2 h-4 w-4")
                 }

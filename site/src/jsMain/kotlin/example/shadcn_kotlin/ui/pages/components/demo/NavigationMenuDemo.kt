@@ -1,6 +1,6 @@
 package example.shadcn_kotlin.ui.pages.components.demo
 
-import lucide_react.Bird
+import example.shadcn_kotlin.ui.components.sections.logo
 import react.FC
 import react.Props
 import react.dom.html.AnchorHTMLAttributes
@@ -22,36 +22,36 @@ data class NavigationMenuDemoItem(
 private val components = listOf(
     NavigationMenuDemoItem(
         title = "Alert Dialog",
-        href = "/docs/primitives/alert-dialog",
+        href = "/docs/components/alert-dialog",
         description =
         "A modal dialog that interrupts the user with important content and expects a response."
     ),
     NavigationMenuDemoItem(
         title = "Hover Card",
-        href = "/docs/primitives/hover-card",
+        href = "/docs/components/hover-card",
         description =
         "For sighted users to preview content available behind a link.",
     ),
     NavigationMenuDemoItem(
         title = "Progress",
-        href = "/docs/primitives/progress",
+        href = "/docs/components/progress",
         description =
         "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
     ),
     NavigationMenuDemoItem(
         title = "Scroll-area",
-        href = "/docs/primitives/scroll-area",
+        href = "/docs/components/scroll-area",
         description = "Visually or semantically separates content.",
     ),
     NavigationMenuDemoItem(
         title = "Tabs",
-        href = "/docs/primitives/tabs",
+        href = "/docs/components/tabs",
         description =
         "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
     ),
     NavigationMenuDemoItem(
         title = "Tooltip",
-        href = "/docs/primitives/tooltip",
+        href = "/docs/components/tooltip",
         description =
         "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
     ),
@@ -73,7 +73,7 @@ val NavigationMenuDemo = FC<Props> {
                                     className =
                                         ClassName("flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md")
                                     href = "/"
-                                    Bird {
+                                    logo {
                                         className = ClassName("h-6 w-6")
                                     }
                                     div {
@@ -98,7 +98,7 @@ val NavigationMenuDemo = FC<Props> {
                             +"How to install dependencies and structure your app."
                         }
                         ListItem {
-                            href = "/docs/primitives/typography"
+                            href = "/docs/components/typography"
                             title = "Introduction"
                             +"Styles for headings, paragraphs, lists...etc"
                         }
@@ -143,9 +143,10 @@ val ListItem = FC<AnchorHTMLAttributes<HTMLAnchorElement>> {
         NavigationMenuLink {
             asChild = true
             a {
+                href = it.href
                 ref = it.ref
                 className =
-                    ClassName("block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground ${it.className}")
+                    ClassName("block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground " + it.className)
                 div {
                     className = ClassName("text-sm font-medium leading-none")
                     +it.title

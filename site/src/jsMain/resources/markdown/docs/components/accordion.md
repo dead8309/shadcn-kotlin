@@ -21,18 +21,16 @@ import shadcn.ui.components.AccordionTrigger
 ```
 
 ```kotlin
-val AccordionDemo = FC<Props> {
-    Accordion {
-        type = "single"
-        collapsible = true
-        AccordionItem {
-            value = "item-1"
-            AccordionTrigger {
-                +"Is it accessible?"
-            }
-            AccordionContent {
-                +"Yes. It adheres to the WAI-ARIA design pattern."
-            }
+Accordion {
+    type = "single"
+    collapsible = true
+    AccordionItem {
+        value = "item-1"
+        AccordionTrigger {
+            +"Is it accessible?"
+        }
+        AccordionContent {
+            +"Yes. It adheres to the WAI-ARIA design pattern."
         }
     }
 }

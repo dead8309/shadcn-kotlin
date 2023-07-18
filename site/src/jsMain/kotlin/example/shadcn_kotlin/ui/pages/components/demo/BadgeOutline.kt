@@ -4,8 +4,9 @@ import react.FC
 import react.Props
 import shadcn.ui.components.Badge
 
-val BadgeDemo = FC<Props> {
+val BadgeOutline = FC<Props> {
     Badge {
-        +"Badge"
+        variant="outline"
+        +"Outline"
     }
 }

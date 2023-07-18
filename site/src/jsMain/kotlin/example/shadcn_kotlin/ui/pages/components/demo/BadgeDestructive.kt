@@ -4,8 +4,9 @@ import react.FC
 import react.Props
 import shadcn.ui.components.Badge
 
-val BadgeDemo = FC<Props> {
+val BadgeDestructive = FC<Props> {
     Badge {
-        +"Badge"
+        variant = "destructive"
+        +"Destructive"
     }
 }
