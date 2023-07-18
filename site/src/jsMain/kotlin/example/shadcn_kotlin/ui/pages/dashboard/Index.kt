@@ -40,12 +40,12 @@ val DashBoardPageLayout = FC<PropsWithChildren> {
             section {
                 className = ClassName("flex w-full items-center space-x-4 pb-8 pt-4 md:pb-10")
                 a {
-                    href = "/"
+                    href = "/docs"
                     className = buttonVariants(extraClassName = "rounded-[6px]")
                     +"Get Started"
                 }
                 a {
-                    href = "/components"
+                    href = "/docs/components"
                     className = buttonVariants(variant = ButtonVariants.outline, extraClassName = "rounded-[6px]")
                     +"Components"
                 }
