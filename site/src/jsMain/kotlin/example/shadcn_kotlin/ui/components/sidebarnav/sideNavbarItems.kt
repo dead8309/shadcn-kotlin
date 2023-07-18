@@ -119,11 +119,6 @@ val sideNavbarItems: List<SidebarNavItem> = listOf(
                 items = emptyList()
             ),
             NavItemWithChildren(
-                title = "Data Table",
-                href = "/docs/components/data-table",
-                items = emptyList()
-            ),
-            NavItemWithChildren(
                 title = "Date Picker",
                 href = "/docs/components/date-picker",
                 items = emptyList()
@@ -136,11 +131,6 @@ val sideNavbarItems: List<SidebarNavItem> = listOf(
             NavItemWithChildren(
                 title = "Dropdown Menu",
                 href = "/docs/components/dropdown-menu",
-                items = emptyList()
-            ),
-            NavItemWithChildren(
-                title = "Form",
-                href = "/docs/components/form",
                 items = emptyList()
             ),
             NavItemWithChildren(
