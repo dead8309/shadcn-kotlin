@@ -9,7 +9,7 @@ imports:
   - .pages.components.demo.CollapsibleDemo
 ---
 
-<ComponentPreview component="CollapsibleDemo" file="CollapsibleDemo" />
+<ComponentPreview component="CollapsibleDemo {}" file="CollapsibleDemo" />
 
 ## Usage
 

@@ -9,7 +9,7 @@ imports:
   - .pages.components.demo.CheckboxDemo
 ---
 
-<ComponentPreview component="CheckboxDemo" file="CheckboxDemo" />
+<ComponentPreview component="CheckboxDemo {}" file="CheckboxDemo" />
 
 ## Usage
 
