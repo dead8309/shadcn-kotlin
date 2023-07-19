@@ -6,13 +6,30 @@ import example.shadcn_kotlin.ui.components.CodeBlock
 import example.shadcn_kotlin.ui.components.Steps
 import example.shadcn_kotlin.ui.docs.index.a
 import example.shadcn_kotlin.ui.docs.index.p
+import react.dom.html.ReactHTML.h2
 import react.dom.html.ReactHTML.h3
 import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.strong
 
 // Note to self: Don't Edit this page every once its published
+
 @Composable
-fun NewProjectSteps() {
+fun AutomaticInstallationSteps() {
+    Steps {
+        // <!------------------------------Automatic SETUP ----------------------------------------->
+        h3 {
+            className = Constants.MDStyles.h3
+            +"Create a new project"
+        }
+        p("Use the Kobweb CLI to create a new project from template.")
+        CodeBlock {
+            lang = "bash"
+            value = Constants.ShadcnKotlin.CREATE_FROM_TEMPLATE
+        }
+    }
+}
+@Composable
+fun ManualInstallationSteps() {
     Steps {
         h3 {
             className = Constants.MDStyles.h3

@@ -22,6 +22,7 @@ object Constants {
         const val name = "shadcn-kotlin"
         const val version = "1.0.0"
         const val implementation = "implementation(\"io.github.dead8309:shadcn-kotlin:$version\")"
+        const val CREATE_FROM_TEMPLATE = "kobweb create shadcn-kobweb --repo https://github.com/dead8309/shadcn-kotlin-templates\n"
     }
     object Babel {
         const val name = "babel"
