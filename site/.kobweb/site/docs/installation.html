@@ -117,8 +117,23 @@
            <div class="pb-12 pt-8">
             <div id="md">
              <p class="leading-7 [&amp;:not(:first-child)]:mt-6">Unlike the official <a class="font-medium underline underline-offset-4" href="https://ui.shadcn.com">shadcn/ui</a> for React, where the components can be added by cli, here we need to just add a dependency in build.gradle to add all of them.</p>
-             <h2 class="font-heading mt-12 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0" id="new-project">New Project</h2>
-             <div id="rc-a4e33f09-e810-406e-8739-0beb1241be99">
+             <h2 class="font-heading mt-12 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0" id="automatic-installation">Automatic Installation</h2>
+             <div id="rc-d3317241-ed6a-4559-9346-878e114402c2">
+              <div class="[&amp;>h3]:step steps mb-12 ml-4 border-l pl-8 [counter-reset:step]">
+               <h3 class="font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight" id="create-a-new-project">Create a new project</h3>
+               <p class="leading-7 [&amp;:not(:first-child)]:mt-6">Use the Kobweb CLI to create a new project from template.</p>
+               <div class="relative">
+                <pre class="mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border py-4 data-[theme=dark]:bg-background data-[theme=light]:bg-white"><code class="relative rounded font-mono text-sm language-bash">kobweb create shadcn-kobweb --repo https://github.com/dead8309/shadcn-kotlin-templates
+</code><button class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border border-input hover:text-accent-foreground z-10 h-6 w-6 hover:bg-muted absolute right-4 top-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3">
+                   <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                  </svg><span class="sr-only">Copy</span></button></pre>
+               </div>
+              </div>
+             </div>
+             <p class="leading-7 [&amp;:not(:first-child)]:mt-6">That's it. You can now run the site through <code class="bg-muted py-[0.2rem] px-[0.3rem] rounded text-sm">kobweb run</code></p>
+             <h2 class="font-heading mt-12 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0" id="manual-installation">Manual Installation</h2>
+             <div id="rc-17c85b87-ad69-40d2-8a7c-712f9d4d045c">
               <div class="[&amp;>h3]:step steps mb-12 ml-4 border-l pl-8 [counter-reset:step]">
                <h3 class="font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight" id="create-a-new-project">Create a new project</h3>
                <p class="leading-7 [&amp;:not(:first-child)]:mt-6">Use the Kobweb CLI to create a new project.</p>
@@ -407,7 +422,11 @@ fun PageLayout(
                 <div class="space-y-2">
                  <p class="font-medium">On This Page</p>
                  <ul class="m-0 list-none">
-                  <li class="mt-0 pt-2"><a href="#new-project" class="inline-block no-underline transition-colors hover:text-foreground text-muted-foreground">New Project</a>
+                  <li class="mt-0 pt-2"><a href="#automatic-installation" class="inline-block no-underline transition-colors hover:text-foreground text-muted-foreground">Automatic Installation</a>
+                   <ul class="m-0 list-none pl-4">
+                    <li class="mt-0 pt-2"><a href="#create-a-new-project" class="inline-block no-underline transition-colors hover:text-foreground text-muted-foreground">Create a new project</a></li>
+                   </ul></li>
+                  <li class="mt-0 pt-2"><a href="#manual-installation" class="inline-block no-underline transition-colors hover:text-foreground text-muted-foreground">Manual Installation</a>
                    <ul class="m-0 list-none pl-4">
                     <li class="mt-0 pt-2"><a href="#create-a-new-project" class="inline-block no-underline transition-colors hover:text-foreground text-muted-foreground">Create a new project</a></li>
                     <li class="mt-0 pt-2"><a href="#add-tailwind-kt-plugin" class="inline-block no-underline transition-colors hover:text-foreground text-muted-foreground">Add tailwind-kt Plugin</a></li>
