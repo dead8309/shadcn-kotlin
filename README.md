@@ -5,8 +5,7 @@
  </h1>
 </p>
 
-[shadcn-kotlin](https://shadcn-kotlin.vercel.app) is an unofficial port of [shadcn/ui](https://ui.shadcn.com/) made using
-using [Kobweb](https://kobweb.varabyte.com/)
+[shadcn-kotlin](https://shadcn-kotlin.vercel.app) is an unofficial port of [shadcn/ui](https://ui.shadcn.com/) made using [Kobweb](https://kobweb.varabyte.com/)
 
 > **Note** <br> **This project is not affiliated with shadcn, but inspired by him** <br> This project is created in need for ui library for the KotlinJs community.
 
