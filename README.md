@@ -48,7 +48,7 @@ at `http://localhost:8080`.
 
 
 ## Integration with Tailwind CSS
-Using [tailwind-kt](https://github.con/dead8309/tailwind-kt) gradle plugin which does everything.
+Using [tailwind-kt](https://github.com/dead8309/tailwind-kt) gradle plugin which does everything.
 
 You can read the manual configuration [here](./tailwind-integration.md) which has been used before.
 
